@@ -1,120 +1,4000 @@
-mean(y=ax+beta*y) = 1.230181
-dotprod = 75038.376122
-red = 0.000000
-mean(y=ax+beta*y) = -31.783028
-dotprod = 5190.498914
-red = -0.000000
-mean(y=ax+beta*y) = 13.229947
-dotprod = 10640.903432
-red = -0.000000
-mean(y=ax+beta*y) = -12.434679
-dotprod = 16965.275161
-red = 0.000000
-mean(y=ax+beta*y) = -139.218805
-dotprod = 962609.905134
-red = 0.000000
-mean(y=ax+beta*y) = 11.799203
-dotprod = 19253.731004
-red = 0.000000
-mean(y=ax+beta*y) = 2.560188
-dotprod = 919773.541883
-red = -0.000000
-mean(y=ax+beta*y) = 2.899904
-dotprod = 265236.643347
-red = 0.000000
-mean(y=ax+beta*y) = 5.243024
-dotprod = 6425.514548
-red = 0.000000
-mean(y=ax+beta*y) = 0.440959
-dotprod = 1571556.357723
-red = -0.000000
-mean(y=ax+beta*y) = -11.689395
-dotprod = 226914.451385
-red = 0.000000
-mean(y=ax+beta*y) = -85.529848
-dotprod = 699856.246143
-red = -0.000000
-mean(y=ax+beta*y) = 23.217734
-dotprod = 1229436.855711
-red = -0.000000
-mean(y=ax+beta*y) = -3.786008
-dotprod = 355825.794472
-red = 0.000000
-mean(y=ax+beta*y) = 13.758850
-dotprod = 2880438.940751
-red = 0.000000
-mean(y=ax+beta*y) = 7.745062
-dotprod = 189771.164996
-red = 0.000000
-mean(y=ax+beta*y) = 8.349250
-dotprod = 124840.584910
-red = -0.000000
-mean(y=ax+beta*y) = -0.269512
-dotprod = 522305.772339
-red = 0.000000
-mean(y=ax+beta*y) = -6.143124
-dotprod = 39741.033049
-red = -0.000000
-mean(y=ax+beta*y) = 3.269121
-dotprod = 205191.110459
-red = 0.000000
-mean(y=ax+beta*y) = 40.789440
-dotprod = 134885.689591
-red = 0.000000
-mean(y=ax+beta*y) = -2.415929
-dotprod = 40553.343988
-red = -0.000000
-mean(y=ax+beta*y) = -10.212307
-dotprod = 16766165.644875
-red = -0.000000
-mean(y=ax+beta*y) = 2.966312
-dotprod = 168700.463410
-red = -0.000000
-mean(y=ax+beta*y) = -10.686327
-dotprod = 275160.704457
-red = -0.000000
-mean(y=ax+beta*y) = 10.840173
-dotprod = 989232.676779
-red = -0.000000
-mean(y=ax+beta*y) = -1.707234
-dotprod = 194029.131873
-red = -0.000000
-mean(y=ax+beta*y) = 6.070792
-dotprod = 76932.216398
-red = -0.000000
-mean(y=ax+beta*y) = 0.082054
-dotprod = 1060594.774399
-red = 0.000000
-mean(y=ax+beta*y) = -2.053024
-dotprod = 245742.821180
-red = 0.000000
-mean(y=ax+beta*y) = 3.422403
-dotprod = 358519.720680
-red = 0.000000
-mean(y=ax+beta*y) = -28.615689
-dotprod = 1754248.408357
-red = -0.000000
-mean(y=ax+beta*y) = -28.824317
-dotprod = 1090824.280711
-red = 0.000000
-mean(y=ax+beta*y) = -1.420948
-dotprod = 1802178.045559
-red = -0.000000
-mean(y=ax+beta*y) = -23.487441
-dotprod = 228516.131439
-red = 0.000000
-mean(y=ax+beta*y) = 1.427893
-dotprod = 816221.179942
-red = -0.000000
-mean(y=ax+beta*y) = 2.258275
-dotprod = 1315125.617639
-red = -0.000000
-mean(y=ax+beta*y) = -2.675280
-dotprod = 833753.139084
-red = -0.000000
-mean(y=ax+beta*y) = -4.940572
-dotprod = 4896188.311350
-red = 0.000000
-mean(y=ax+beta*y) = 2.599557
-dotprod = 19452222.657592
-red = 0.000000
+0
+mean(y=ax+beta*y) = 0.416995
+dotprod = 79492.686814
+red = 41.699514
+0
+mean(y=ax+beta*y) = -4.639230
+dotprod = 646.061776
+red = -463.922982
+0
+mean(y=ax+beta*y) = 4.251219
+dotprod = 15173.570024
+red = 425.121866
+0
+mean(y=ax+beta*y) = -65.803874
+dotprod = -35619.490521
+red = -6580.387381
+0
+mean(y=ax+beta*y) = -16.786598
+dotprod = -198.690657
+red = -1678.659797
+0
+mean(y=ax+beta*y) = 1.911654
+dotprod = 8366.804632
+red = 191.165399
+0
+mean(y=ax+beta*y) = 9.881800
+dotprod = 9721.186974
+red = 988.180024
+0
+mean(y=ax+beta*y) = 5.141320
+dotprod = 149955.586912
+red = 514.131964
+0
+mean(y=ax+beta*y) = -26.537772
+dotprod = 5884.843575
+red = -2653.777206
+0
+mean(y=ax+beta*y) = 0.096354
+dotprod = 2345.230072
+red = 9.635393
+1
+mean(y=ax+beta*y) = -4.340266
+dotprod = 693362.746630
+red = -868.053211
+1
+mean(y=ax+beta*y) = -34.627545
+dotprod = 52675790.090243
+red = -6925.509067
+1
+mean(y=ax+beta*y) = 24.873630
+dotprod = 832393.543241
+red = 4974.726051
+1
+mean(y=ax+beta*y) = -0.593634
+dotprod = 5425.711648
+red = -118.726897
+1
+mean(y=ax+beta*y) = 3.691736
+dotprod = 286912.190410
+red = 738.347104
+1
+mean(y=ax+beta*y) = 0.328161
+dotprod = 7236.245946
+red = 65.632182
+1
+mean(y=ax+beta*y) = 0.444707
+dotprod = 1452755.990584
+red = 88.941360
+1
+mean(y=ax+beta*y) = -9.366474
+dotprod = 22686.276629
+red = -1873.294861
+1
+mean(y=ax+beta*y) = -10.308044
+dotprod = 14267.668580
+red = -2061.608710
+1
+mean(y=ax+beta*y) = -13.907060
+dotprod = 68336.513142
+red = -2781.411971
+2
+mean(y=ax+beta*y) = -1.691598
+dotprod = 663804.019288
+red = -507.479305
+2
+mean(y=ax+beta*y) = -23.847772
+dotprod = 81312092.026075
+red = -7154.331504
+2
+mean(y=ax+beta*y) = 3.798446
+dotprod = 82967.087335
+red = 1139.533729
+2
+mean(y=ax+beta*y) = -5.989767
+dotprod = 5299000.917653
+red = -1796.930204
+2
+mean(y=ax+beta*y) = -3.329943
+dotprod = 11148.793963
+red = -998.982782
+2
+mean(y=ax+beta*y) = -19.771938
+dotprod = 1456168.576030
+red = -5931.581258
+2
+mean(y=ax+beta*y) = -0.823200
+dotprod = 3148664.823250
+red = -246.959903
+2
+mean(y=ax+beta*y) = 9.441139
+dotprod = 52809.580269
+red = 2832.341802
+2
+mean(y=ax+beta*y) = 3.063371
+dotprod = 60686.770173
+red = 919.011189
+2
+mean(y=ax+beta*y) = 2.533705
+dotprod = 719409.537273
+red = 760.111454
+3
+mean(y=ax+beta*y) = -3.763915
+dotprod = 343296.745689
+red = -1505.566026
+3
+mean(y=ax+beta*y) = 3.795273
+dotprod = 35266.490822
+red = 1518.109340
+3
+mean(y=ax+beta*y) = 2.661784
+dotprod = 326386.690515
+red = 1064.713538
+3
+mean(y=ax+beta*y) = 0.236586
+dotprod = 113828.001771
+red = 94.634277
+3
+mean(y=ax+beta*y) = 77.090878
+dotprod = 93602.813261
+red = 30836.351054
+3
+mean(y=ax+beta*y) = -0.513064
+dotprod = 141304.794890
+red = -205.225657
+3
+mean(y=ax+beta*y) = -2.490148
+dotprod = 26163.368750
+red = -996.059285
+3
+mean(y=ax+beta*y) = -2.391833
+dotprod = 129629.729140
+red = -956.733041
+3
+mean(y=ax+beta*y) = -9.687014
+dotprod = 16847360.849582
+red = -3874.805531
+3
+mean(y=ax+beta*y) = 1.577998
+dotprod = 276100.536592
+red = 631.199032
+4
+mean(y=ax+beta*y) = 6.420902
+dotprod = 229340.953420
+red = 3210.450752
+4
+mean(y=ax+beta*y) = -21.360632
+dotprod = 136232.260508
+red = -10680.315780
+4
+mean(y=ax+beta*y) = 13.631589
+dotprod = 45035.625934
+red = 6815.794641
+4
+mean(y=ax+beta*y) = 9.049868
+dotprod = 278068.196407
+red = 4524.934233
+4
+mean(y=ax+beta*y) = -2.350034
+dotprod = 137328.145644
+red = -1175.016830
+4
+mean(y=ax+beta*y) = 3.949643
+dotprod = 151405.467638
+red = 1974.821739
+4
+mean(y=ax+beta*y) = 7.911817
+dotprod = 27951.173718
+red = 3955.908467
+4
+mean(y=ax+beta*y) = -1.645200
+dotprod = 1000665.127894
+red = -822.599866
+4
+mean(y=ax+beta*y) = -4.840741
+dotprod = 55056.772899
+red = -2420.370357
+4
+mean(y=ax+beta*y) = -1.089641
+dotprod = 84394.822169
+red = -544.820260
+5
+mean(y=ax+beta*y) = 2.408579
+dotprod = 322563.245628
+red = 1445.147548
+5
+mean(y=ax+beta*y) = 3.016379
+dotprod = 16440.613844
+red = 1809.827213
+5
+mean(y=ax+beta*y) = -3.409815
+dotprod = 1566995.999812
+red = -2045.888817
+5
+mean(y=ax+beta*y) = -13.118646
+dotprod = 45124821.762368
+red = -7871.187763
+5
+mean(y=ax+beta*y) = -24.937856
+dotprod = 12812029.019887
+red = -14962.713380
+5
+mean(y=ax+beta*y) = -0.872527
+dotprod = 1604226.577093
+red = -523.515904
+5
+mean(y=ax+beta*y) = 1.248143
+dotprod = 242572.250598
+red = 748.885747
+5
+mean(y=ax+beta*y) = -36.483499
+dotprod = 51225.050838
+red = -21890.099234
+5
+mean(y=ax+beta*y) = -7.633025
+dotprod = 165143.493619
+red = -4579.815277
+5
+mean(y=ax+beta*y) = 1.257557
+dotprod = 192633.599539
+red = 754.534250
+6
+mean(y=ax+beta*y) = 0.274580
+dotprod = 1063779.241699
+red = 192.206105
+6
+mean(y=ax+beta*y) = 4.943893
+dotprod = 228277.121301
+red = 3460.725278
+6
+mean(y=ax+beta*y) = -0.664905
+dotprod = 763099.317097
+red = -465.433244
+6
+mean(y=ax+beta*y) = -2.081241
+dotprod = 4923878.863277
+red = -1456.868970
+6
+mean(y=ax+beta*y) = 11.079494
+dotprod = 19720233.205262
+red = 7755.645637
+6
+mean(y=ax+beta*y) = 3.545663
+dotprod = 1037782.165679
+red = 2481.964027
+6
+mean(y=ax+beta*y) = 2.634334
+dotprod = 189577.609925
+red = 1844.033972
+6
+mean(y=ax+beta*y) = 1.383339
+dotprod = 1851077.746627
+red = 968.337263
+6
+mean(y=ax+beta*y) = -1.831097
+dotprod = 532908.812521
+red = -1281.767566
+6
+mean(y=ax+beta*y) = 5.227306
+dotprod = 200021.748591
+red = 3659.114348
+7
+mean(y=ax+beta*y) = 1.025073
+dotprod = 1193139.368454
+red = 820.058419
+7
+mean(y=ax+beta*y) = -3.149163
+dotprod = 280007.522726
+red = -2519.330454
+7
+mean(y=ax+beta*y) = -2.616491
+dotprod = 4091741.964074
+red = -2093.192583
+7
+mean(y=ax+beta*y) = -3.388500
+dotprod = 31324855.494866
+red = -2710.800143
+7
+mean(y=ax+beta*y) = 7.495434
+dotprod = 243051.532367
+red = 5996.347457
+7
+mean(y=ax+beta*y) = -9.885148
+dotprod = 33862604.630472
+red = -7908.118453
+7
+mean(y=ax+beta*y) = 3.280593
+dotprod = 4511030.924573
+red = 2624.474613
+7
+mean(y=ax+beta*y) = -4.511244
+dotprod = 28315.795374
+red = -3608.994878
+7
+mean(y=ax+beta*y) = 8.593263
+dotprod = 92175620.325891
+red = 6874.610327
+7
+mean(y=ax+beta*y) = -9.858464
+dotprod = 160749.239922
+red = -7886.771500
+8
+mean(y=ax+beta*y) = -8.319392
+dotprod = 27914708.078199
+red = -7487.452580
+8
+mean(y=ax+beta*y) = -0.287902
+dotprod = 391229.005212
+red = -259.111414
+8
+mean(y=ax+beta*y) = 1.898511
+dotprod = 43347014.615662
+red = 1708.659541
+8
+mean(y=ax+beta*y) = 3.655390
+dotprod = 1066349.838224
+red = 3289.850622
+8
+mean(y=ax+beta*y) = -5.902807
+dotprod = 92767.018124
+red = -5312.526047
+8
+mean(y=ax+beta*y) = 14.804030
+dotprod = 61307.181083
+red = 13323.627032
+8
+mean(y=ax+beta*y) = -0.948788
+dotprod = 504119.071150
+red = -853.908961
+8
+mean(y=ax+beta*y) = -2.952466
+dotprod = 33499855.392602
+red = -2657.219361
+8
+mean(y=ax+beta*y) = 6.943079
+dotprod = 684164.164646
+red = 6248.771092
+8
+mean(y=ax+beta*y) = 3.298315
+dotprod = 717007.467925
+red = 2968.483467
+9
+mean(y=ax+beta*y) = 1.968022
+dotprod = 512179.894091
+red = 1968.022323
+9
+mean(y=ax+beta*y) = -18.715893
+dotprod = 228901.232830
+red = -18715.893443
+9
+mean(y=ax+beta*y) = -13.320921
+dotprod = 180866.707504
+red = -13320.921186
+9
+mean(y=ax+beta*y) = -3.722456
+dotprod = 585835.595895
+red = -3722.456333
+9
+mean(y=ax+beta*y) = -4.041531
+dotprod = 1043592.009073
+red = -4041.531476
+9
+mean(y=ax+beta*y) = 1.615983
+dotprod = 875686.269916
+red = 1615.983117
+9
+mean(y=ax+beta*y) = -1.751162
+dotprod = 155544.431854
+red = -1751.162241
+9
+mean(y=ax+beta*y) = -2.276307
+dotprod = 182748.008078
+red = -2276.306636
+9
+mean(y=ax+beta*y) = 7.879597
+dotprod = 19581200.016928
+red = 7879.597344
+9
+mean(y=ax+beta*y) = -1.738113
+dotprod = 159946.996409
+red = -1738.112947
+10
+mean(y=ax+beta*y) = 8.181054
+dotprod = 148788593.975128
+red = 8999.159894
+10
+mean(y=ax+beta*y) = -1.377829
+dotprod = 3909635.946193
+red = -1515.611809
+10
+mean(y=ax+beta*y) = 7.019306
+dotprod = 586458.422189
+red = 7721.236143
+10
+mean(y=ax+beta*y) = -9.693716
+dotprod = 3535520.372665
+red = -10663.087656
+10
+mean(y=ax+beta*y) = -16.112690
+dotprod = 502493.696818
+red = -17723.958547
+10
+mean(y=ax+beta*y) = 1.997134
+dotprod = 1316519.615440
+red = 2196.847172
+10
+mean(y=ax+beta*y) = -4.663022
+dotprod = 2767312.028531
+red = -5129.323825
+10
+mean(y=ax+beta*y) = -6.345455
+dotprod = 253567.422334
+red = -6980.000946
+10
+mean(y=ax+beta*y) = 3.910942
+dotprod = 672253.061419
+red = 4302.036622
+10
+mean(y=ax+beta*y) = 0.838180
+dotprod = 1660445.887199
+red = 921.997685
+11
+mean(y=ax+beta*y) = 22.522659
+dotprod = 440154.137898
+red = 27027.190751
+11
+mean(y=ax+beta*y) = 3.075060
+dotprod = 7414415.690890
+red = 3690.071420
+11
+mean(y=ax+beta*y) = -5.800108
+dotprod = 732919.301016
+red = -6960.130101
+11
+mean(y=ax+beta*y) = 6.189647
+dotprod = 52006750.573609
+red = 7427.576950
+11
+mean(y=ax+beta*y) = 3.134564
+dotprod = 2916291.331918
+red = 3761.476789
+11
+mean(y=ax+beta*y) = -38.318839
+dotprod = 798148.063986
+red = -45982.606382
+11
+mean(y=ax+beta*y) = 1.172904
+dotprod = -2248274.231293
+red = 1407.485128
+11
+mean(y=ax+beta*y) = 5.165222
+dotprod = 1254566.095681
+red = 6198.266435
+11
+mean(y=ax+beta*y) = 0.628435
+dotprod = 1950978.832253
+red = 754.121661
+11
+mean(y=ax+beta*y) = -1.656475
+dotprod = 582109.195670
+red = -1987.770332
+12
+mean(y=ax+beta*y) = -3.447773
+dotprod = 1747821.080906
+red = -4482.104485
+12
+mean(y=ax+beta*y) = -13.545676
+dotprod = 548252.039254
+red = -17609.379171
+12
+mean(y=ax+beta*y) = -6.384517
+dotprod = 4782603.776701
+red = -8299.872547
+12
+mean(y=ax+beta*y) = -12.490987
+dotprod = 4336253.215502
+red = -16238.283351
+12
+mean(y=ax+beta*y) = 754.002303
+dotprod = -2803869.689708
+red = 980202.994378
+12
+mean(y=ax+beta*y) = -40.184001
+dotprod = 3051662870.626031
+red = -52239.200888
+12
+mean(y=ax+beta*y) = -10.345899
+dotprod = 2910482.063097
+red = -13449.668325
+12
+mean(y=ax+beta*y) = 0.695897
+dotprod = 7260365.540135
+red = 904.666369
+12
+mean(y=ax+beta*y) = -0.182784
+dotprod = 564016.068882
+red = -237.618623
+12
+mean(y=ax+beta*y) = -2.106020
+dotprod = 962774.611224
+red = -2737.825947
+13
+mean(y=ax+beta*y) = 342.355137
+dotprod = 9066231.466878
+red = 479297.191725
+13
+mean(y=ax+beta*y) = -71.750261
+dotprod = 937336.165073
+red = -100450.365902
+13
+mean(y=ax+beta*y) = 3.579272
+dotprod = 157752.920618
+red = 5010.981347
+13
+mean(y=ax+beta*y) = 7.446130
+dotprod = 337468.481082
+red = 10424.581331
+13
+mean(y=ax+beta*y) = 3.871516
+dotprod = 1038058.288236
+red = 5420.122049
+13
+mean(y=ax+beta*y) = -3.258705
+dotprod = 437483.351895
+red = -4562.187228
+13
+mean(y=ax+beta*y) = 6.904676
+dotprod = 837231.264982
+red = 9666.547086
+13
+mean(y=ax+beta*y) = -0.822820
+dotprod = 2571750.879019
+red = -1151.948011
+13
+mean(y=ax+beta*y) = -1.664150
+dotprod = 3106029.604479
+red = -2329.810671
+13
+mean(y=ax+beta*y) = -19.866234
+dotprod = 17258176.715913
+red = -27812.727600
+14
+mean(y=ax+beta*y) = 14.625128
+dotprod = 222887022.965584
+red = 21937.692046
+14
+mean(y=ax+beta*y) = -22.952736
+dotprod = 1377337262.468217
+red = -34429.103692
+14
+mean(y=ax+beta*y) = -2.932134
+dotprod = 825956.896078
+red = -4398.201073
+14
+mean(y=ax+beta*y) = 69.919534
+dotprod = 18582442.917906
+red = 104879.301607
+14
+mean(y=ax+beta*y) = -25.354230
+dotprod = 8911511.333324
+red = -38031.344323
+14
+mean(y=ax+beta*y) = -8.280630
+dotprod = 313390.016711
+red = -12420.944800
+14
+mean(y=ax+beta*y) = -3.944154
+dotprod = 524994.761801
+red = -5916.230441
+14
+mean(y=ax+beta*y) = 3.797395
+dotprod = 20008847.517596
+red = 5696.093024
+14
+mean(y=ax+beta*y) = 1.209134
+dotprod = 26415502.487434
+red = 1813.701745
+14
+mean(y=ax+beta*y) = -0.518852
+dotprod = 30408646.146486
+red = -778.277624
+15
+mean(y=ax+beta*y) = 0.782996
+dotprod = 989243.931650
+red = 1252.794358
+15
+mean(y=ax+beta*y) = 0.739534
+dotprod = 1033818.327672
+red = 1183.254368
+15
+mean(y=ax+beta*y) = -14.244627
+dotprod = 41474758.288742
+red = -22791.402964
+15
+mean(y=ax+beta*y) = -9.801223
+dotprod = 700441.323979
+red = -15681.956871
+15
+mean(y=ax+beta*y) = 22.115944
+dotprod = 6726212.675969
+red = 35385.509944
+15
+mean(y=ax+beta*y) = 13.166622
+dotprod = 350256182.841843
+red = 21066.595151
+15
+mean(y=ax+beta*y) = -1.239813
+dotprod = 3736952.537022
+red = -1983.700340
+15
+mean(y=ax+beta*y) = 29.158367
+dotprod = 11968818.717353
+red = 46653.386981
+15
+mean(y=ax+beta*y) = 7.505882
+dotprod = 4797534.199705
+red = 12009.411202
+15
+mean(y=ax+beta*y) = 104.433684
+dotprod = 827059.733447
+red = 167093.894210
+16
+mean(y=ax+beta*y) = -0.918821
+dotprod = 2603421.851351
+red = -1561.995583
+16
+mean(y=ax+beta*y) = -11.236202
+dotprod = 154240576.716991
+red = -19101.542979
+16
+mean(y=ax+beta*y) = -13.460516
+dotprod = 946710.319892
+red = -22882.877754
+16
+mean(y=ax+beta*y) = -30.928218
+dotprod = 2341414.385913
+red = -52577.970686
+16
+mean(y=ax+beta*y) = 3.865263
+dotprod = 403761.478395
+red = 6570.947067
+16
+mean(y=ax+beta*y) = -23.569143
+dotprod = 585881.310522
+red = -40067.543475
+16
+mean(y=ax+beta*y) = 40.393711
+dotprod = 6405886.498548
+red = 68669.307855
+16
+mean(y=ax+beta*y) = 1.755109
+dotprod = 551972.599216
+red = 2983.684640
+16
+mean(y=ax+beta*y) = -14.419978
+dotprod = 6333286.126318
+red = -24513.963335
+16
+mean(y=ax+beta*y) = 4.981264
+dotprod = 5562713.833946
+red = 8468.148137
+17
+mean(y=ax+beta*y) = 0.866569
+dotprod = 13193121.117236
+red = 1559.823737
+17
+mean(y=ax+beta*y) = 3.221178
+dotprod = 4320615.763174
+red = 5798.121217
+17
+mean(y=ax+beta*y) = 0.510776
+dotprod = 15420599.410037
+red = 919.396398
+17
+mean(y=ax+beta*y) = 31.055088
+dotprod = 7961409.435145
+red = 55899.158709
+17
+mean(y=ax+beta*y) = -3.727405
+dotprod = 1855122.927405
+red = -6709.328880
+17
+mean(y=ax+beta*y) = -18.173639
+dotprod = 469329.713956
+red = -32712.550058
+17
+mean(y=ax+beta*y) = 14.694306
+dotprod = 32345127.855380
+red = 26449.750681
+17
+mean(y=ax+beta*y) = -0.173123
+dotprod = 514371.187662
+red = -311.621021
+17
+mean(y=ax+beta*y) = 1244.080925
+dotprod = -8149492.545777
+red = 2239345.664440
+17
+mean(y=ax+beta*y) = 0.210147
+dotprod = 1253207.074615
+red = 378.265060
+18
+mean(y=ax+beta*y) = -2.593742
+dotprod = 1046130.145839
+red = -4928.109097
+18
+mean(y=ax+beta*y) = -15.619533
+dotprod = 1276232.686230
+red = -29677.111786
+18
+mean(y=ax+beta*y) = 3.829373
+dotprod = 14932135.433431
+red = 7275.809009
+18
+mean(y=ax+beta*y) = -4.867401
+dotprod = 233871610.047312
+red = -9248.061905
+18
+mean(y=ax+beta*y) = -58.374952
+dotprod = 12094396817.449566
+red = -110912.409505
+18
+mean(y=ax+beta*y) = 0.237714
+dotprod = 12897423.531466
+red = 451.656042
+18
+mean(y=ax+beta*y) = 1.960800
+dotprod = 9188671.264318
+red = 3725.520601
+18
+mean(y=ax+beta*y) = -4.664498
+dotprod = 730120.444364
+red = -8862.545796
+18
+mean(y=ax+beta*y) = -3.410906
+dotprod = 152470825.729144
+red = -6480.721971
+18
+mean(y=ax+beta*y) = 62.820528
+dotprod = 11553542.234222
+red = 119359.003738
+19
+mean(y=ax+beta*y) = -1.568820
+dotprod = 15680549.158874
+red = -3137.640554
+19
+mean(y=ax+beta*y) = 6.851072
+dotprod = 8989970.596000
+red = 13702.144372
+19
+mean(y=ax+beta*y) = -9.042193
+dotprod = 4698577.631752
+red = -18084.385397
+19
+mean(y=ax+beta*y) = -17.980763
+dotprod = 2863625.797670
+red = -35961.526286
+19
+mean(y=ax+beta*y) = -6.307527
+dotprod = 541007.412257
+red = -12615.053417
+19
+mean(y=ax+beta*y) = 0.526238
+dotprod = 590022.961329
+red = 1052.476593
+19
+mean(y=ax+beta*y) = -4.702652
+dotprod = 863794.115576
+red = -9405.303530
+19
+mean(y=ax+beta*y) = -11.648813
+dotprod = 15234826.268468
+red = -23297.625060
+19
+mean(y=ax+beta*y) = 0.429185
+dotprod = 28167907.116746
+red = 858.369306
+19
+mean(y=ax+beta*y) = 10.658336
+dotprod = 50390158.567344
+red = 21316.671620
+20
+mean(y=ax+beta*y) = 1.240541
+dotprod = 19626076.847123
+red = 2605.135111
+20
+mean(y=ax+beta*y) = 2.147868
+dotprod = 1477465.295204
+red = 4510.522828
+20
+mean(y=ax+beta*y) = -3.995381
+dotprod = 1741157.821539
+red = -8390.299162
+20
+mean(y=ax+beta*y) = 2.824325
+dotprod = 1141204.019127
+red = 5931.082280
+20
+mean(y=ax+beta*y) = -16.983911
+dotprod = 3026971.593735
+red = -35666.213432
+20
+mean(y=ax+beta*y) = 18.816202
+dotprod = 848776.689785
+red = 39514.024811
+20
+mean(y=ax+beta*y) = 2.323802
+dotprod = 5471244.797092
+red = 4879.983327
+20
+mean(y=ax+beta*y) = -2.815142
+dotprod = 1483132.760024
+red = -5911.798414
+20
+mean(y=ax+beta*y) = -1.929755
+dotprod = 5043027.888840
+red = -4052.485884
+20
+mean(y=ax+beta*y) = 2.111429
+dotprod = 3006985.306634
+red = 4434.000319
+21
+mean(y=ax+beta*y) = 732.477099
+dotprod = -1116577.312495
+red = 1611449.617587
+21
+mean(y=ax+beta*y) = -1.596958
+dotprod = 5553130.815968
+red = -3513.307655
+21
+mean(y=ax+beta*y) = 11.482385
+dotprod = 1475577.868100
+red = 25261.247704
+21
+mean(y=ax+beta*y) = 14.502659
+dotprod = 392549096.440546
+red = 31905.850837
+21
+mean(y=ax+beta*y) = -1.441299
+dotprod = 1331109.297473
+red = -3170.857352
+21
+mean(y=ax+beta*y) = -37.687932
+dotprod = 506581729.309807
+red = -82913.451159
+21
+mean(y=ax+beta*y) = -4.226141
+dotprod = 46275218.986055
+red = -9297.510386
+21
+mean(y=ax+beta*y) = -1.304498
+dotprod = 22405358.307288
+red = -2869.896632
+21
+mean(y=ax+beta*y) = -20.887988
+dotprod = 1945836.159366
+red = -45953.574619
+21
+mean(y=ax+beta*y) = 4.962043
+dotprod = 667373.601947
+red = 10916.495022
+22
+mean(y=ax+beta*y) = 3.699357
+dotprod = 24633398.625676
+red = 8508.521124
+22
+mean(y=ax+beta*y) = 6.945095
+dotprod = 3148247.317526
+red = 15973.717726
+22
+mean(y=ax+beta*y) = -5.544839
+dotprod = 90104801.151019
+red = -12753.130837
+22
+mean(y=ax+beta*y) = -17.456042
+dotprod = 1499121.216046
+red = -40148.896468
+22
+mean(y=ax+beta*y) = 8.509266
+dotprod = 39516551.913662
+red = 19571.312529
+22
+mean(y=ax+beta*y) = 0.751055
+dotprod = 3713310.252809
+red = 1727.426487
+22
+mean(y=ax+beta*y) = 7.851187
+dotprod = 650052.712379
+red = 18057.729314
+22
+mean(y=ax+beta*y) = -12.063485
+dotprod = 2229457.013214
+red = -27746.016382
+22
+mean(y=ax+beta*y) = -3.976434
+dotprod = 24986411.055556
+red = -9145.798637
+22
+mean(y=ax+beta*y) = 7.606140
+dotprod = 6898839.968663
+red = 17494.122453
+23
+mean(y=ax+beta*y) = 12.335915
+dotprod = 15683420.632895
+red = 29606.195011
+23
+mean(y=ax+beta*y) = -7.283296
+dotprod = 4088015.947179
+red = -17479.910055
+23
+mean(y=ax+beta*y) = 111.218687
+dotprod = 936183.938872
+red = 266924.848563
+23
+mean(y=ax+beta*y) = -0.715857
+dotprod = 349691.368102
+red = -1718.056232
+23
+mean(y=ax+beta*y) = 10.869143
+dotprod = 37270907.236240
+red = 26085.944208
+23
+mean(y=ax+beta*y) = 0.664814
+dotprod = 2150355.235134
+red = 1595.552874
+23
+mean(y=ax+beta*y) = 2.345086
+dotprod = 1130695.069919
+red = 5628.206595
+23
+mean(y=ax+beta*y) = 6.053870
+dotprod = 191252047.408600
+red = 14529.287065
+23
+mean(y=ax+beta*y) = -2.089710
+dotprod = 11536194.637316
+red = -5015.305007
+23
+mean(y=ax+beta*y) = -0.185023
+dotprod = 7162561.335102
+red = -444.054395
+24
+mean(y=ax+beta*y) = -37.386398
+dotprod = 1560379.140437
+red = -93465.995585
+24
+mean(y=ax+beta*y) = 0.995108
+dotprod = 2747092.479048
+red = 2487.770443
+24
+mean(y=ax+beta*y) = -9.387597
+dotprod = 1712150981.205934
+red = -23468.993327
+24
+mean(y=ax+beta*y) = -5.577580
+dotprod = 1315010.573531
+red = -13943.949901
+24
+mean(y=ax+beta*y) = -5.166258
+dotprod = 983067.192213
+red = -12915.645504
+24
+mean(y=ax+beta*y) = -10.178803
+dotprod = 6756338.714688
+red = -25447.007025
+24
+mean(y=ax+beta*y) = -5.557857
+dotprod = 311226932.422705
+red = -13894.643742
+24
+mean(y=ax+beta*y) = -3.791240
+dotprod = 33919672.073091
+red = -9478.100111
+24
+mean(y=ax+beta*y) = 113.927491
+dotprod = 78645252061.692871
+red = 284818.726428
+24
+mean(y=ax+beta*y) = 8.626994
+dotprod = 251618126.293689
+red = 21567.485579
+25
+mean(y=ax+beta*y) = -37.377078
+dotprod = 11088255.869285
+red = -97180.401687
+25
+mean(y=ax+beta*y) = 1.469225
+dotprod = 11874514.531190
+red = 3819.983840
+25
+mean(y=ax+beta*y) = -3.977427
+dotprod = 1969165.570484
+red = -10341.310757
+25
+mean(y=ax+beta*y) = -11.842282
+dotprod = 19007513.345936
+red = -30789.933236
+25
+mean(y=ax+beta*y) = -8.737585
+dotprod = 99057384.039967
+red = -22717.719959
+25
+mean(y=ax+beta*y) = 3.816924
+dotprod = 26598065.747191
+red = 9924.002934
+25
+mean(y=ax+beta*y) = -17.205860
+dotprod = 2929512.325039
+red = -44735.235757
+25
+mean(y=ax+beta*y) = 11.043809
+dotprod = 3995365.352518
+red = 28713.903700
+25
+mean(y=ax+beta*y) = 1922.589399
+dotprod = -3863077.376725
+red = 4998732.438486
+25
+mean(y=ax+beta*y) = -9.941492
+dotprod = 13291730.718021
+red = -25847.879258
+26
+mean(y=ax+beta*y) = -8.361663
+dotprod = 2722895.191731
+red = -22576.491031
+26
+mean(y=ax+beta*y) = -0.678886
+dotprod = 1101826.187799
+red = -1832.991665
+26
+mean(y=ax+beta*y) = 16.009375
+dotprod = 970139.450497
+red = 43225.312807
+26
+mean(y=ax+beta*y) = 0.787487
+dotprod = 3798133.878616
+red = 2126.216137
+26
+mean(y=ax+beta*y) = -6.374325
+dotprod = 1779372.207146
+red = -17210.678205
+26
+mean(y=ax+beta*y) = 7.700534
+dotprod = 302585285.430143
+red = 20791.442478
+26
+mean(y=ax+beta*y) = -12.093699
+dotprod = 972478.696021
+red = -32652.987993
+26
+mean(y=ax+beta*y) = -3.121204
+dotprod = 36749479.995780
+red = -8427.251400
+26
+mean(y=ax+beta*y) = -6.890063
+dotprod = 1484453.830955
+red = -18603.171045
+26
+mean(y=ax+beta*y) = 0.839098
+dotprod = 152505144.712733
+red = 2265.563531
+27
+mean(y=ax+beta*y) = -6.893253
+dotprod = 6544098.257608
+red = -19301.107955
+27
+mean(y=ax+beta*y) = -2.342510
+dotprod = 2398333.328227
+red = -6559.026862
+27
+mean(y=ax+beta*y) = 1.280313
+dotprod = 1373652.626052
+red = 3584.877342
+27
+mean(y=ax+beta*y) = 2.270631
+dotprod = 3345296.882106
+red = 6357.766703
+27
+mean(y=ax+beta*y) = 2.852704
+dotprod = 36931739.287651
+red = 7987.572375
+27
+mean(y=ax+beta*y) = 44.456119
+dotprod = 166114316.061478
+red = 124477.134446
+27
+mean(y=ax+beta*y) = 8.293164
+dotprod = 245462128.445443
+red = 23220.857862
+27
+mean(y=ax+beta*y) = 0.555762
+dotprod = 541181495.971936
+red = 1556.134450
+27
+mean(y=ax+beta*y) = 3.836259
+dotprod = 1561115.168025
+red = 10741.525593
+27
+mean(y=ax+beta*y) = 0.297050
+dotprod = 14025469.325844
+red = 831.740685
+28
+mean(y=ax+beta*y) = -3.233556
+dotprod = 6482279.857473
+red = -9377.312617
+28
+mean(y=ax+beta*y) = 3.942315
+dotprod = 994025.593567
+red = 11432.714778
+28
+mean(y=ax+beta*y) = -14.762269
+dotprod = 4191458.716533
+red = -42810.579059
+28
+mean(y=ax+beta*y) = 11.273794
+dotprod = 1078393.658831
+red = 32694.001949
+28
+mean(y=ax+beta*y) = 3.819034
+dotprod = 4577868.774531
+red = 11075.197375
+28
+mean(y=ax+beta*y) = 2.047571
+dotprod = 24848060.032314
+red = 5937.955333
+28
+mean(y=ax+beta*y) = 0.152397
+dotprod = 4120185.841769
+red = 441.951636
+28
+mean(y=ax+beta*y) = -3.591276
+dotprod = 39196020.533060
+red = -10414.700850
+28
+mean(y=ax+beta*y) = -68.825222
+dotprod = 65066824.908587
+red = -199593.143412
+28
+mean(y=ax+beta*y) = 9.312650
+dotprod = 23202847.351697
+red = 27006.685101
+29
+mean(y=ax+beta*y) = 1.847688
+dotprod = 9980908.224364
+red = 5543.064610
+29
+mean(y=ax+beta*y) = 1.528154
+dotprod = 9972667.227540
+red = 4584.461861
+29
+mean(y=ax+beta*y) = -0.006315
+dotprod = 2511570.941649
+red = -18.943698
+29
+mean(y=ax+beta*y) = -1.361694
+dotprod = 1070913.439280
+red = -4085.080543
+29
+mean(y=ax+beta*y) = 1.639436
+dotprod = 4040949.151335
+red = 4918.307137
+29
+mean(y=ax+beta*y) = -14.476302
+dotprod = 4722126.841225
+red = -43428.905740
+29
+mean(y=ax+beta*y) = 18.895240
+dotprod = 2826806656.729826
+red = 56685.719985
+29
+mean(y=ax+beta*y) = -5.857295
+dotprod = 23988099.826668
+red = -17571.886329
+29
+mean(y=ax+beta*y) = 3.980271
+dotprod = 237029006.694397
+red = 11940.812561
+29
+mean(y=ax+beta*y) = -14.561590
+dotprod = 551300563.501775
+red = -43684.771009
+30
+mean(y=ax+beta*y) = 14.707312
+dotprod = 33842166.969492
+red = 45592.667375
+30
+mean(y=ax+beta*y) = -6.664490
+dotprod = 689044888.581527
+red = -20659.920422
+30
+mean(y=ax+beta*y) = -2.450016
+dotprod = 6433039.015540
+red = -7595.048839
+30
+mean(y=ax+beta*y) = -5.408758
+dotprod = 2649790.940403
+red = -16767.150534
+30
+mean(y=ax+beta*y) = -12.134576
+dotprod = 949236.935001
+red = -37617.184140
+30
+mean(y=ax+beta*y) = -6.157801
+dotprod = 2440754.740279
+red = -19089.182333
+30
+mean(y=ax+beta*y) = -4.131007
+dotprod = 5457573.671852
+red = -12806.123021
+30
+mean(y=ax+beta*y) = -4.301281
+dotprod = 497047391.781189
+red = -13333.972621
+30
+mean(y=ax+beta*y) = 104.156967
+dotprod = 6741305.057632
+red = 322886.599030
+30
+mean(y=ax+beta*y) = -133.077350
+dotprod = 17847168.180710
+red = -412539.784058
+31
+mean(y=ax+beta*y) = -8.675012
+dotprod = 249408161.107795
+red = -27760.037328
+31
+mean(y=ax+beta*y) = 3.128928
+dotprod = 4658901.939284
+red = 10012.568222
+31
+mean(y=ax+beta*y) = 3.889402
+dotprod = 6598684.240780
+red = 12446.085687
+31
+mean(y=ax+beta*y) = 8.363802
+dotprod = 305591145.084461
+red = 26764.165785
+31
+mean(y=ax+beta*y) = -5.641784
+dotprod = 43268606.849609
+red = -18053.710108
+31
+mean(y=ax+beta*y) = -14.488770
+dotprod = 12949944.441597
+red = -46364.062541
+31
+mean(y=ax+beta*y) = -28.234957
+dotprod = 14508742.879827
+red = -90351.861321
+31
+mean(y=ax+beta*y) = 2.306742
+dotprod = 43692604.962804
+red = 7381.575516
+31
+mean(y=ax+beta*y) = 0.182161
+dotprod = 1421068.995906
+red = 582.914115
+31
+mean(y=ax+beta*y) = -13.270383
+dotprod = 3620809.883922
+red = -42465.226655
+32
+mean(y=ax+beta*y) = 0.292744
+dotprod = 11670667.767025
+red = 966.055225
+32
+mean(y=ax+beta*y) = -10.129365
+dotprod = 610523.208365
+red = -33426.905840
+32
+mean(y=ax+beta*y) = -0.756500
+dotprod = 3682895.712186
+red = -2496.451295
+32
+mean(y=ax+beta*y) = 2.149517
+dotprod = 58495076.718407
+red = 7093.405423
+32
+mean(y=ax+beta*y) = -11.971213
+dotprod = 26662782.600078
+red = -39505.002706
+32
+mean(y=ax+beta*y) = -0.245974
+dotprod = 31393856.537087
+red = -811.713955
+32
+mean(y=ax+beta*y) = -11.412614
+dotprod = 3601249.783404
+red = -37661.625707
+32
+mean(y=ax+beta*y) = 50.047377
+dotprod = 10069294.175734
+red = 165156.344556
+32
+mean(y=ax+beta*y) = -5.022051
+dotprod = 1003983.909140
+red = -16572.768752
+32
+mean(y=ax+beta*y) = 0.266479
+dotprod = 1214457.063868
+red = 879.380350
+33
+mean(y=ax+beta*y) = -0.238558
+dotprod = 8762290.637557
+red = -811.097056
+33
+mean(y=ax+beta*y) = 3.735443
+dotprod = 2320355.956223
+red = 12700.507825
+33
+mean(y=ax+beta*y) = 3.407417
+dotprod = 3985604.644876
+red = 11585.218281
+33
+mean(y=ax+beta*y) = -29.019483
+dotprod = 13029634757.295677
+red = -98666.240695
+33
+mean(y=ax+beta*y) = -0.737631
+dotprod = 4503141.853962
+red = -2507.945837
+33
+mean(y=ax+beta*y) = -1.247102
+dotprod = 28831075.052166
+red = -4240.146630
+33
+mean(y=ax+beta*y) = 1.496843
+dotprod = 5315904.975256
+red = 5089.265422
+33
+mean(y=ax+beta*y) = -2.152164
+dotprod = 4050809.964686
+red = -7317.357958
+33
+mean(y=ax+beta*y) = 16.865190
+dotprod = 24632325.574476
+red = 57341.646749
+33
+mean(y=ax+beta*y) = -3.999389
+dotprod = 1637832.866716
+red = -13597.921846
+34
+mean(y=ax+beta*y) = -0.768408
+dotprod = 7842274.844155
+red = -2689.426512
+34
+mean(y=ax+beta*y) = 3.606177
+dotprod = 18791283.663051
+red = 12621.620338
+34
+mean(y=ax+beta*y) = -4.431920
+dotprod = 1700446.184193
+red = -15511.718307
+34
+mean(y=ax+beta*y) = 4.073229
+dotprod = 7168312.586971
+red = 14256.301537
+34
+mean(y=ax+beta*y) = 31.859796
+dotprod = 40188558.876770
+red = 111509.286809
+34
+mean(y=ax+beta*y) = 7.686715
+dotprod = 7050019493.624430
+red = 26903.503539
+34
+mean(y=ax+beta*y) = -4.071627
+dotprod = 710914153.660486
+red = -14250.695984
+34
+mean(y=ax+beta*y) = 50.967754
+dotprod = 5473913.000732
+red = 178387.138507
+34
+mean(y=ax+beta*y) = 10.235452
+dotprod = 104287391.282470
+red = 35824.081899
+34
+mean(y=ax+beta*y) = 8.435175
+dotprod = 965398234.794492
+red = 29523.112024
+35
+mean(y=ax+beta*y) = 3.349487
+dotprod = 1653094.590486
+red = 12058.153097
+35
+mean(y=ax+beta*y) = 6.211558
+dotprod = 9605686.016593
+red = 22361.608097
+35
+mean(y=ax+beta*y) = -4.840689
+dotprod = 14402123.279391
+red = -17426.480342
+35
+mean(y=ax+beta*y) = 3.576061
+dotprod = 18403129.380887
+red = 12873.820094
+35
+mean(y=ax+beta*y) = -0.378358
+dotprod = 20576345.986384
+red = -1362.088259
+35
+mean(y=ax+beta*y) = -4.464754
+dotprod = 30783829.828949
+red = -16073.114220
+35
+mean(y=ax+beta*y) = -2.737470
+dotprod = 398089998.169933
+red = -9854.891082
+35
+mean(y=ax+beta*y) = -1.902512
+dotprod = 11270115.545628
+red = -6849.044213
+35
+mean(y=ax+beta*y) = -28.650231
+dotprod = 9370031.457563
+red = -103140.831126
+35
+mean(y=ax+beta*y) = 21.430961
+dotprod = 3710468.242245
+red = 77151.460309
+36
+mean(y=ax+beta*y) = -1.942062
+dotprod = 20424704.222305
+red = -7185.630382
+36
+mean(y=ax+beta*y) = -3.195771
+dotprod = 130629.738817
+red = -11824.351807
+36
+mean(y=ax+beta*y) = 7.220362
+dotprod = 1522740.786541
+red = 26715.339203
+36
+mean(y=ax+beta*y) = -0.179673
+dotprod = 35652454.506595
+red = -664.789729
+36
+mean(y=ax+beta*y) = 5.625099
+dotprod = 5293827.896318
+red = 20812.867508
+36
+mean(y=ax+beta*y) = 8.246421
+dotprod = 11778320.664447
+red = 30511.759135
+36
+mean(y=ax+beta*y) = 20.951688
+dotprod = 7112153.035847
+red = 77521.245178
+36
+mean(y=ax+beta*y) = 1.829047
+dotprod = 1500026.186059
+red = 6767.472314
+36
+mean(y=ax+beta*y) = 5.100114
+dotprod = 9630079.711970
+red = 18870.420640
+36
+mean(y=ax+beta*y) = -40.124944
+dotprod = 12431576.072664
+red = -148462.294198
+37
+mean(y=ax+beta*y) = 1.145923
+dotprod = 3462591.843622
+red = 4354.505581
+37
+mean(y=ax+beta*y) = 9.429205
+dotprod = 127122720.343435
+red = 35830.977156
+37
+mean(y=ax+beta*y) = 9.963426
+dotprod = 9440580.679616
+red = 37861.018801
+37
+mean(y=ax+beta*y) = -10.836777
+dotprod = 11230005.048987
+red = -41179.752636
+37
+mean(y=ax+beta*y) = -7.292489
+dotprod = 9756375.070557
+red = -27711.459082
+37
+mean(y=ax+beta*y) = -5.089740
+dotprod = 61089944.256747
+red = -19341.013342
+37
+mean(y=ax+beta*y) = -118.925221
+dotprod = 177601285.577130
+red = -451915.841388
+37
+mean(y=ax+beta*y) = -1.517559
+dotprod = 2923298.155919
+red = -5766.723825
+37
+mean(y=ax+beta*y) = 3.347281
+dotprod = 5672457.797693
+red = 12719.666739
+37
+mean(y=ax+beta*y) = -36.176876
+dotprod = 2133600.381445
+red = -137472.128117
+38
+mean(y=ax+beta*y) = -5.448422
+dotprod = 11107909.307771
+red = -21248.844124
+38
+mean(y=ax+beta*y) = 10.408650
+dotprod = 4288897.284440
+red = 40593.734615
+38
+mean(y=ax+beta*y) = 3.819747
+dotprod = 9496565.078265
+red = 14897.011737
+38
+mean(y=ax+beta*y) = 10.031076
+dotprod = 800966470.201241
+red = 39121.198088
+38
+mean(y=ax+beta*y) = 11.526691
+dotprod = 36231013.306643
+red = 44954.093645
+38
+mean(y=ax+beta*y) = -29.792864
+dotprod = 23049641.031084
+red = -116192.169801
+38
+mean(y=ax+beta*y) = 6.293574
+dotprod = 6755298.590750
+red = 24544.939254
+38
+mean(y=ax+beta*y) = 1.452313
+dotprod = 2248461.792367
+red = 5664.019902
+38
+mean(y=ax+beta*y) = 8.165522
+dotprod = 1114986682.280203
+red = 31845.535733
+38
+mean(y=ax+beta*y) = -4.761185
+dotprod = 24783008.160377
+red = -18568.622420
+39
+mean(y=ax+beta*y) = -11.468500
+dotprod = 9523587451.236782
+red = -45873.999920
+39
+mean(y=ax+beta*y) = 165.590969
+dotprod = 133717408.106414
+red = 662363.876621
+39
+mean(y=ax+beta*y) = -1.340985
+dotprod = 27639029.518440
+red = -5363.940035
+39
+mean(y=ax+beta*y) = 7.009997
+dotprod = 690306855.787907
+red = 28039.988774
+39
+mean(y=ax+beta*y) = -0.883349
+dotprod = 99356057.493665
+red = -3533.397232
+39
+mean(y=ax+beta*y) = 1.055215
+dotprod = 11843936.152361
+red = 4220.860766
+39
+mean(y=ax+beta*y) = -27.465849
+dotprod = 3948989.716104
+red = -109863.396549
+39
+mean(y=ax+beta*y) = 39.559255
+dotprod = 7581097.898361
+red = 158237.019338
+39
+mean(y=ax+beta*y) = 7253.382543
+dotprod = 1087460955073157.375000
+red = 29013530.173204
+39
+mean(y=ax+beta*y) = -1.846935
+dotprod = 1157193.199209
+red = -7387.738795
+40
+mean(y=ax+beta*y) = -4.654383
+dotprod = 42243665.749015
+red = -19082.969968
+40
+mean(y=ax+beta*y) = 5.031900
+dotprod = 603293.383614
+red = 20630.788946
+40
+mean(y=ax+beta*y) = 19.760962
+dotprod = 12190453.736864
+red = 81019.945278
+40
+mean(y=ax+beta*y) = 0.891470
+dotprod = 2880181.196956
+red = 3655.028484
+40
+mean(y=ax+beta*y) = 10.973617
+dotprod = 50658375.238760
+red = 44991.827705
+40
+mean(y=ax+beta*y) = -9.307834
+dotprod = 14055980.026820
+red = -38162.118443
+40
+mean(y=ax+beta*y) = -0.557819
+dotprod = 9399079.921194
+red = -2287.059782
+40
+mean(y=ax+beta*y) = 42.164619
+dotprod = 37812627837.411896
+red = 172874.937787
+40
+mean(y=ax+beta*y) = 54.729617
+dotprod = 7902596.769018
+red = 224391.428267
+40
+mean(y=ax+beta*y) = 10.099372
+dotprod = 481965790.813927
+red = 41407.425126
+41
+mean(y=ax+beta*y) = 4.622052
+dotprod = 223634427.437755
+red = 19412.619320
+41
+mean(y=ax+beta*y) = 0.662181
+dotprod = 2792145.222638
+red = 2781.159081
+41
+mean(y=ax+beta*y) = 2.482044
+dotprod = 4125931.874297
+red = 10424.583141
+41
+mean(y=ax+beta*y) = -43.910287
+dotprod = 82087791.693236
+red = -184423.206693
+41
+mean(y=ax+beta*y) = -8.873996
+dotprod = 8273863.394424
+red = -37270.784879
+41
+mean(y=ax+beta*y) = -8.991792
+dotprod = 2830415.221317
+red = -37765.525227
+41
+mean(y=ax+beta*y) = -2.445244
+dotprod = 7570052.798793
+red = -10270.026357
+41
+mean(y=ax+beta*y) = 0.441463
+dotprod = 65164919.428139
+red = 1854.142864
+41
+mean(y=ax+beta*y) = 0.220238
+dotprod = 11785099.804234
+red = 924.998968
+41
+mean(y=ax+beta*y) = 20.039122
+dotprod = 25154198.552592
+red = 84164.313807
+42
+mean(y=ax+beta*y) = 0.542232
+dotprod = 53449206.885137
+red = 2331.595470
+42
+mean(y=ax+beta*y) = -0.015436
+dotprod = 5856065.654136
+red = -66.375941
+42
+mean(y=ax+beta*y) = 16.230400
+dotprod = 13660152.006067
+red = 69790.719657
+42
+mean(y=ax+beta*y) = -1.974195
+dotprod = 5860605.132037
+red = -8489.038230
+42
+mean(y=ax+beta*y) = -11.822173
+dotprod = 75265681.097664
+red = -50835.343331
+42
+mean(y=ax+beta*y) = 2.254032
+dotprod = 2603438.497360
+red = 9692.338728
+42
+mean(y=ax+beta*y) = -5.555982
+dotprod = 2314614.324823
+red = -23890.723699
+42
+mean(y=ax+beta*y) = 0.061122
+dotprod = 47594392.046427
+red = 262.825900
+42
+mean(y=ax+beta*y) = 2.081980
+dotprod = 15813648.165516
+red = 8952.515751
+42
+mean(y=ax+beta*y) = -0.841329
+dotprod = 10989378.116626
+red = -3617.714187
+43
+mean(y=ax+beta*y) = -21.137170
+dotprod = 118123236.448410
+red = -93003.547272
+43
+mean(y=ax+beta*y) = -5.298592
+dotprod = 7694146.358272
+red = -23313.806200
+43
+mean(y=ax+beta*y) = -1.679375
+dotprod = 112222988.863417
+red = -7389.249844
+43
+mean(y=ax+beta*y) = 10.413556
+dotprod = 54752946.875450
+red = 45819.646644
+43
+mean(y=ax+beta*y) = 3.773999
+dotprod = 18177368.428722
+red = 16605.594831
+43
+mean(y=ax+beta*y) = -5.203095
+dotprod = 28694880.774244
+red = -22893.616002
+43
+mean(y=ax+beta*y) = -8.354375
+dotprod = 133750978.596497
+red = -36759.250123
+43
+mean(y=ax+beta*y) = 9.455948
+dotprod = 4548280.396965
+red = 41606.169547
+43
+mean(y=ax+beta*y) = -0.391626
+dotprod = 8558227.892181
+red = -1723.155002
+43
+mean(y=ax+beta*y) = 45.748387
+dotprod = 36527546408.421608
+red = 201292.903890
+44
+mean(y=ax+beta*y) = 5.452830
+dotprod = 52221511.492877
+red = 24537.734122
+44
+mean(y=ax+beta*y) = 4.071863
+dotprod = 2392464.716604
+red = 18323.383960
+44
+mean(y=ax+beta*y) = -6.241223
+dotprod = 1583420.455572
+red = -28085.502504
+44
+mean(y=ax+beta*y) = 13.906319
+dotprod = 897572551.602407
+red = 62578.435778
+44
+mean(y=ax+beta*y) = -0.793284
+dotprod = 6530217.863492
+red = -3569.777941
+44
+mean(y=ax+beta*y) = 2.092623
+dotprod = 252425159.210452
+red = 9416.804085
+44
+mean(y=ax+beta*y) = -3.441287
+dotprod = 694687091.470684
+red = -15485.790411
+44
+mean(y=ax+beta*y) = -3.785005
+dotprod = 10321429.875498
+red = -17032.520836
+44
+mean(y=ax+beta*y) = -1.003323
+dotprod = 96102889.041273
+red = -4514.951668
+44
+mean(y=ax+beta*y) = -7.037113
+dotprod = 6016815.326031
+red = -31667.009938
+45
+mean(y=ax+beta*y) = 0.946649
+dotprod = 9232384.804775
+red = 4354.586282
+45
+mean(y=ax+beta*y) = 1.543340
+dotprod = 35621021.267744
+red = 7099.363078
+45
+mean(y=ax+beta*y) = -5.008791
+dotprod = 1764918.405079
+red = -23040.438667
+45
+mean(y=ax+beta*y) = -21.301812
+dotprod = 13321850.871033
+red = -97988.334822
+45
+mean(y=ax+beta*y) = 4.854883
+dotprod = 40411841.820288
+red = 22332.464002
+45
+mean(y=ax+beta*y) = 0.174410
+dotprod = 4611656.622536
+red = 802.287247
+45
+mean(y=ax+beta*y) = 9.934257
+dotprod = 7413646.013782
+red = 45697.582951
+45
+mean(y=ax+beta*y) = 2.599047
+dotprod = 4374468.731660
+red = 11955.617948
+45
+mean(y=ax+beta*y) = 12.429663
+dotprod = 2167860.983353
+red = 57176.449585
+45
+mean(y=ax+beta*y) = 16.859531
+dotprod = 284393949.514914
+red = 77553.840707
+46
+mean(y=ax+beta*y) = -3.054038
+dotprod = 433642188.244146
+red = -14353.977644
+46
+mean(y=ax+beta*y) = 42.988192
+dotprod = 6362543.645782
+red = 202044.504077
+46
+mean(y=ax+beta*y) = -25.152439
+dotprod = 29149500.572501
+red = -118216.464142
+46
+mean(y=ax+beta*y) = 7.544924
+dotprod = 2069154.603854
+red = 35461.141040
+46
+mean(y=ax+beta*y) = -9.240868
+dotprod = 11824635.429835
+red = -43432.079245
+46
+mean(y=ax+beta*y) = -6.507676
+dotprod = 9915093.340648
+red = -30586.077186
+46
+mean(y=ax+beta*y) = 6.106804
+dotprod = 32376148.817070
+red = 28701.980414
+46
+mean(y=ax+beta*y) = 0.392406
+dotprod = 1664486.524365
+red = 1844.306091
+46
+mean(y=ax+beta*y) = -2.773283
+dotprod = 42481240.395718
+red = -13034.429723
+46
+mean(y=ax+beta*y) = -21.579590
+dotprod = 2989397.470512
+red = -101424.073105
+47
+mean(y=ax+beta*y) = 0.008037
+dotprod = 3629964.254228
+red = 38.577798
+47
+mean(y=ax+beta*y) = -2.772920
+dotprod = 34161392.168689
+red = -13310.013680
+47
+mean(y=ax+beta*y) = -47.766815
+dotprod = 9824060.433160
+red = -229280.712045
+47
+mean(y=ax+beta*y) = -12.988573
+dotprod = 2146068990.609024
+red = -62345.149478
+47
+mean(y=ax+beta*y) = -1.277429
+dotprod = 6284905.080722
+red = -6131.658023
+47
+mean(y=ax+beta*y) = 3.480424
+dotprod = 1610088182.642271
+red = 16706.036617
+47
+mean(y=ax+beta*y) = -4.546719
+dotprod = 3317291.352534
+red = -21824.252771
+47
+mean(y=ax+beta*y) = 3.924932
+dotprod = 21577622.605506
+red = 18839.674481
+47
+mean(y=ax+beta*y) = -4.376272
+dotprod = 266260716.877499
+red = -21006.107564
+47
+mean(y=ax+beta*y) = 4.549307
+dotprod = 3582691.147384
+red = 21836.672574
+48
+mean(y=ax+beta*y) = 18.506426
+dotprod = 110770046.725962
+red = 90681.485008
+48
+mean(y=ax+beta*y) = -0.618731
+dotprod = 43226878.312198
+red = -3031.781921
+48
+mean(y=ax+beta*y) = 6.224509
+dotprod = 15147651.437667
+red = 30500.091779
+48
+mean(y=ax+beta*y) = -3.497180
+dotprod = 25191932.479483
+red = -17136.181426
+48
+mean(y=ax+beta*y) = -15.221851
+dotprod = 55762278.685686
+red = -74587.070900
+48
+mean(y=ax+beta*y) = 5.551111
+dotprod = 5480246.704820
+red = 27200.443686
+48
+mean(y=ax+beta*y) = 10.126263
+dotprod = 12505338.997093
+red = 49618.690373
+48
+mean(y=ax+beta*y) = 0.891626
+dotprod = 378139910.086004
+red = 4368.966780
+48
+mean(y=ax+beta*y) = -11.414553
+dotprod = 7836603.274179
+red = -55931.307489
+48
+mean(y=ax+beta*y) = -13.544563
+dotprod = 5690076.499439
+red = -66368.357886
+49
+mean(y=ax+beta*y) = 4.991563
+dotprod = 78728988.962152
+red = 24957.816659
+49
+mean(y=ax+beta*y) = 7.327115
+dotprod = 74765734.422877
+red = 36635.572757
+49
+mean(y=ax+beta*y) = -5.081706
+dotprod = 48609696.256386
+red = -25408.529358
+49
+mean(y=ax+beta*y) = -2.422139
+dotprod = 295753530.817969
+red = -12110.695131
+49
+mean(y=ax+beta*y) = 10.136768
+dotprod = 10450620.945111
+red = 50683.840614
+49
+mean(y=ax+beta*y) = 63.142960
+dotprod = 5977444.856266
+red = 315714.798947
+49
+mean(y=ax+beta*y) = 3.022559
+dotprod = 11237821.768778
+red = 15112.793292
+49
+mean(y=ax+beta*y) = 8.414238
+dotprod = 7141533.466668
+red = 42071.188145
+49
+mean(y=ax+beta*y) = -0.025124
+dotprod = 49949449.879772
+red = -125.621645
+49
+mean(y=ax+beta*y) = 23.118359
+dotprod = 5549783.631657
+red = 115591.793708
+50
+mean(y=ax+beta*y) = 1.016187
+dotprod = 1939878.713638
+red = 5182.552458
+50
+mean(y=ax+beta*y) = -10.416015
+dotprod = 8751414.739795
+red = -53121.678133
+50
+mean(y=ax+beta*y) = 4.515684
+dotprod = 35664021.030065
+red = 23029.987586
+50
+mean(y=ax+beta*y) = 2.114538
+dotprod = 15432325.492195
+red = 10784.143663
+50
+mean(y=ax+beta*y) = -2.198699
+dotprod = 3244597.579158
+red = -11213.364427
+50
+mean(y=ax+beta*y) = 86.951925
+dotprod = 60062085.125474
+red = 443454.815361
+50
+mean(y=ax+beta*y) = 2.371391
+dotprod = 197667929.905748
+red = 12094.093714
+50
+mean(y=ax+beta*y) = 30.116707
+dotprod = 2136270.870407
+red = 153595.204218
+50
+mean(y=ax+beta*y) = 0.557336
+dotprod = 2051763.543388
+red = 2842.414329
+50
+mean(y=ax+beta*y) = 0.730918
+dotprod = 13951505.281788
+red = 3727.680081
+51
+mean(y=ax+beta*y) = 19.495656
+dotprod = 7866237.570051
+red = 101377.412712
+51
+mean(y=ax+beta*y) = 7.424144
+dotprod = 76431003.673991
+red = 38605.549313
+51
+mean(y=ax+beta*y) = -4.320715
+dotprod = 12356746.401499
+red = -22467.717294
+51
+mean(y=ax+beta*y) = 12.279517
+dotprod = 34473984.822679
+red = 63853.490771
+51
+mean(y=ax+beta*y) = 1.247251
+dotprod = 1609540.608892
+red = 6485.705164
+51
+mean(y=ax+beta*y) = -0.536683
+dotprod = 9639412.653097
+red = -2790.750175
+51
+mean(y=ax+beta*y) = -2.179260
+dotprod = 98398603.292445
+red = -11332.150460
+51
+mean(y=ax+beta*y) = -2.514540
+dotprod = 99737456.251186
+red = -13075.609828
+51
+mean(y=ax+beta*y) = -17.550634
+dotprod = 18469782.504625
+red = -91263.296154
+51
+mean(y=ax+beta*y) = 18.405007
+dotprod = 74405307.212979
+red = 95706.036646
+52
+mean(y=ax+beta*y) = 3.765750
+dotprod = 19688390.196343
+red = 19958.476238
+52
+mean(y=ax+beta*y) = -2.896473
+dotprod = 49292638.568483
+red = -15351.304866
+52
+mean(y=ax+beta*y) = 7.675158
+dotprod = 12949658.004356
+red = 40678.337668
+52
+mean(y=ax+beta*y) = 2.258314
+dotprod = 10695453.565319
+red = 11969.064329
+52
+mean(y=ax+beta*y) = -1.325455
+dotprod = 60549100.113768
+red = -7024.913015
+52
+mean(y=ax+beta*y) = 0.933389
+dotprod = 930084626.944272
+red = 4946.961938
+52
+mean(y=ax+beta*y) = 3.376996
+dotprod = 19101887.256839
+red = 17898.080426
+52
+mean(y=ax+beta*y) = 2.201460
+dotprod = 105149702.046445
+red = 11667.740531
+52
+mean(y=ax+beta*y) = 45.519274
+dotprod = 20272245447.573895
+red = 241252.150200
+52
+mean(y=ax+beta*y) = -5.349783
+dotprod = 366426709.580883
+red = -28353.850273
+53
+mean(y=ax+beta*y) = -5.671439
+dotprod = 184767650.367062
+red = -30625.768573
+53
+mean(y=ax+beta*y) = -6.783890
+dotprod = 281049347.368650
+red = -36633.007766
+53
+mean(y=ax+beta*y) = 2.385381
+dotprod = 19698770.365497
+red = 12881.055043
+53
+mean(y=ax+beta*y) = -6.940959
+dotprod = 12763693.790761
+red = -37481.180251
+53
+mean(y=ax+beta*y) = -5.021848
+dotprod = 259358610.747610
+red = -27117.977668
+53
+mean(y=ax+beta*y) = -4.601378
+dotprod = 4617339.976487
+red = -24847.439045
+53
+mean(y=ax+beta*y) = -2.237332
+dotprod = 8479468.349905
+red = -12081.591615
+53
+mean(y=ax+beta*y) = 4.350275
+dotprod = 6330922.738151
+red = 23491.485916
+53
+mean(y=ax+beta*y) = 2.356222
+dotprod = 2088499.548945
+red = 12723.598237
+53
+mean(y=ax+beta*y) = -2.954866
+dotprod = 32463885.218361
+red = -15956.276547
+54
+mean(y=ax+beta*y) = -2.286233
+dotprod = 28179994.605325
+red = -12574.279723
+54
+mean(y=ax+beta*y) = 1.354421
+dotprod = 407436754.446182
+red = 7449.315370
+54
+mean(y=ax+beta*y) = 1.285466
+dotprod = 133232554.915418
+red = 7070.065439
+54
+mean(y=ax+beta*y) = -1.452087
+dotprod = 128417639.290570
+red = -7986.476817
+54
+mean(y=ax+beta*y) = -2.487931
+dotprod = 89461712.692084
+red = -13683.621381
+54
+mean(y=ax+beta*y) = -5.208050
+dotprod = 4177572.251705
+red = -28644.274169
+54
+mean(y=ax+beta*y) = 0.236066
+dotprod = 22794480.074935
+red = 1298.364450
+54
+mean(y=ax+beta*y) = -2.934789
+dotprod = 676513889.179128
+red = -16141.341607
+54
+mean(y=ax+beta*y) = -0.453172
+dotprod = 16305792.954673
+red = -2492.447643
+54
+mean(y=ax+beta*y) = -5.087645
+dotprod = 11815196.441215
+red = -27982.045036
+55
+mean(y=ax+beta*y) = -53.600866
+dotprod = 47067607.308290
+red = -300164.846860
+55
+mean(y=ax+beta*y) = 2.745475
+dotprod = 33825427.681277
+red = 15374.659172
+55
+mean(y=ax+beta*y) = 2.174571
+dotprod = 53533357.063237
+red = 12177.595254
+55
+mean(y=ax+beta*y) = 56.461888
+dotprod = 92847232943.060211
+red = 316186.573010
+55
+mean(y=ax+beta*y) = 2.028084
+dotprod = 71893846.191617
+red = 11357.269022
+55
+mean(y=ax+beta*y) = -9.801176
+dotprod = 7632253.626422
+red = -54886.587479
+55
+mean(y=ax+beta*y) = -3.043472
+dotprod = 4164946.523790
+red = -17043.442456
+55
+mean(y=ax+beta*y) = -2.740306
+dotprod = 380347149.070524
+red = -15345.715259
+55
+mean(y=ax+beta*y) = 1.283189
+dotprod = 10310358.957119
+red = 7185.857314
+55
+mean(y=ax+beta*y) = 0.399222
+dotprod = 14043278.727458
+red = 2235.640475
+56
+mean(y=ax+beta*y) = 2.571643
+dotprod = 1040214583.455891
+red = 14658.366378
+56
+mean(y=ax+beta*y) = 3.235016
+dotprod = 146577898.307010
+red = 18439.588737
+56
+mean(y=ax+beta*y) = 3.196429
+dotprod = 4519118.960544
+red = 18219.647010
+56
+mean(y=ax+beta*y) = 5.882958
+dotprod = 37621941.829861
+red = 33532.858901
+56
+mean(y=ax+beta*y) = -4.398342
+dotprod = 2142769199.670549
+red = -25070.548083
+56
+mean(y=ax+beta*y) = 2.904085
+dotprod = 5683442.481666
+red = 16553.283799
+56
+mean(y=ax+beta*y) = 61.768916
+dotprod = 22771722.481242
+red = 352082.818921
+56
+mean(y=ax+beta*y) = -22.009172
+dotprod = 15950276.170647
+red = -125452.278930
+56
+mean(y=ax+beta*y) = -6.685174
+dotprod = 5319978.394258
+red = -38105.491256
+56
+mean(y=ax+beta*y) = -0.112906
+dotprod = 10511333.041352
+red = -643.562958
+57
+mean(y=ax+beta*y) = -1.665402
+dotprod = 82808124.102871
+red = -9659.332201
+57
+mean(y=ax+beta*y) = -22.837266
+dotprod = 2895929325.463055
+red = -132456.144632
+57
+mean(y=ax+beta*y) = 32.452747
+dotprod = 1829399.287567
+red = 188225.932052
+57
+mean(y=ax+beta*y) = -0.735426
+dotprod = 39816019.330574
+red = -4265.469683
+57
+mean(y=ax+beta*y) = 21.599592
+dotprod = 8687928.353757
+red = 125277.632636
+57
+mean(y=ax+beta*y) = -0.041288
+dotprod = 1735576.431615
+red = -239.471572
+57
+mean(y=ax+beta*y) = -35.196895
+dotprod = 55013662275.063622
+red = -204141.990110
+57
+mean(y=ax+beta*y) = 0.667815
+dotprod = 59881708.805571
+red = 3873.329551
+57
+mean(y=ax+beta*y) = 4.936157
+dotprod = 12254323.783798
+red = 28629.711823
+57
+mean(y=ax+beta*y) = 0.445338
+dotprod = 28019805.190732
+red = 2582.957714
+58
+mean(y=ax+beta*y) = -30.497015
+dotprod = 3969784.260423
+red = -179932.390369
+58
+mean(y=ax+beta*y) = -9.132279
+dotprod = 25897456.744136
+red = -53880.445568
+58
+mean(y=ax+beta*y) = 23.031236
+dotprod = 9354716759.314987
+red = 135884.292677
+58
+mean(y=ax+beta*y) = -4.208898
+dotprod = 1555621753.478606
+red = -24832.496733
+58
+mean(y=ax+beta*y) = -4.671019
+dotprod = 398549694.891325
+red = -27559.010245
+58
+mean(y=ax+beta*y) = -7.318307
+dotprod = 1268945437.372319
+red = -43178.008899
+58
+mean(y=ax+beta*y) = -6.983582
+dotprod = 3842414.040982
+red = -41203.133608
+58
+mean(y=ax+beta*y) = 58.574697
+dotprod = 114097726080.908951
+red = 345590.709361
+58
+mean(y=ax+beta*y) = 26.010354
+dotprod = 2555357918.320788
+red = 153461.085739
+58
+mean(y=ax+beta*y) = 1.411052
+dotprod = 6743863.590204
+red = 8325.204028
+59
+mean(y=ax+beta*y) = -10.515196
+dotprod = 807409301.483303
+red = -63091.177666
+59
+mean(y=ax+beta*y) = -3.640758
+dotprod = 8823012.588721
+red = -21844.546244
+59
+mean(y=ax+beta*y) = 20.873096
+dotprod = 33895310452.287930
+red = 125238.573839
+59
+mean(y=ax+beta*y) = -0.862958
+dotprod = 4036920.078919
+red = -5177.746824
+59
+mean(y=ax+beta*y) = 298.645240
+dotprod = 8460834.711136
+red = 1791871.439750
+59
+mean(y=ax+beta*y) = -0.475491
+dotprod = 96469585.698060
+red = -2852.946474
+59
+mean(y=ax+beta*y) = -3.127548
+dotprod = 149105244.750418
+red = -18765.289619
+59
+mean(y=ax+beta*y) = -0.698620
+dotprod = 109865674.920207
+red = -4191.719017
+59
+mean(y=ax+beta*y) = -26.348301
+dotprod = 33000608.363200
+red = -158089.805418
+59
+mean(y=ax+beta*y) = -7.768646
+dotprod = 2233436363.636005
+red = -46611.873431
+60
+mean(y=ax+beta*y) = 6.912050
+dotprod = 523025319.747021
+red = 42163.502413
+60
+mean(y=ax+beta*y) = -2.028811
+dotprod = 5412366.262948
+red = -12375.749752
+60
+mean(y=ax+beta*y) = -9.424289
+dotprod = 750034245.109420
+red = -57488.162067
+60
+mean(y=ax+beta*y) = -2.338751
+dotprod = 895988.626312
+red = -14266.380703
+60
+mean(y=ax+beta*y) = 2.236440
+dotprod = 85619676.913066
+red = 13642.285149
+60
+mean(y=ax+beta*y) = -4.587296
+dotprod = 23839097.765076
+red = -27982.504424
+60
+mean(y=ax+beta*y) = 0.231059
+dotprod = 57639243.294750
+red = 1409.459994
+60
+mean(y=ax+beta*y) = 50.443461
+dotprod = 67117273.626486
+red = 307705.109190
+60
+mean(y=ax+beta*y) = -2.156360
+dotprod = 3096544.979644
+red = -13153.794967
+60
+mean(y=ax+beta*y) = 17.535972
+dotprod = 7789121579.969181
+red = 106969.427277
+61
+mean(y=ax+beta*y) = 4.657733
+dotprod = 14076520.923397
+red = 28877.946389
+61
+mean(y=ax+beta*y) = 2.002342
+dotprod = 22833318.782895
+red = 12414.517415
+61
+mean(y=ax+beta*y) = -19.865707
+dotprod = 7546351644.150024
+red = -123167.381732
+61
+mean(y=ax+beta*y) = -1.396501
+dotprod = 8213325.288108
+red = -8658.306908
+61
+mean(y=ax+beta*y) = -0.704818
+dotprod = 5941683.700632
+red = -4369.872172
+61
+mean(y=ax+beta*y) = 9.972857
+dotprod = 3267094.174695
+red = 61831.715333
+61
+mean(y=ax+beta*y) = 29.730132
+dotprod = 175052055.626408
+red = 184326.821109
+61
+mean(y=ax+beta*y) = 8.486858
+dotprod = 5055099.778631
+red = 52618.517935
+61
+mean(y=ax+beta*y) = -14.336615
+dotprod = 27977415.743928
+red = -88887.013713
+61
+mean(y=ax+beta*y) = 66.160950
+dotprod = 27468692.234264
+red = 410197.888526
+62
+mean(y=ax+beta*y) = -3.792410
+dotprod = 11557078.733322
+red = -23892.183803
+62
+mean(y=ax+beta*y) = 51.166315
+dotprod = 236458585.989948
+red = 322347.783078
+62
+mean(y=ax+beta*y) = -6.304267
+dotprod = 564835181.555264
+red = -39716.880626
+62
+mean(y=ax+beta*y) = -4.855709
+dotprod = 227192267.054346
+red = -30590.963610
+62
+mean(y=ax+beta*y) = -4.520088
+dotprod = 201507002.409491
+red = -28476.553320
+62
+mean(y=ax+beta*y) = -6.909070
+dotprod = 4134535.715351
+red = -43527.144112
+62
+mean(y=ax+beta*y) = -6.891496
+dotprod = 36626003.227474
+red = -43416.425804
+62
+mean(y=ax+beta*y) = 7.671433
+dotprod = 2263308101.922837
+red = 48330.028581
+62
+mean(y=ax+beta*y) = 12.917092
+dotprod = 54612835.144178
+red = 81377.680046
+62
+mean(y=ax+beta*y) = -1.711071
+dotprod = 27421808.320372
+red = -10779.747953
+63
+mean(y=ax+beta*y) = -2.596343
+dotprod = 97051266.930046
+red = -16616.593154
+63
+mean(y=ax+beta*y) = 0.064366
+dotprod = 1965005551.802389
+red = 411.940046
+63
+mean(y=ax+beta*y) = 1.149197
+dotprod = 17530181.730313
+red = 7354.858781
+63
+mean(y=ax+beta*y) = -2.132244
+dotprod = 6442834.090900
+red = -13646.363669
+63
+mean(y=ax+beta*y) = 0.139176
+dotprod = 43694476.917855
+red = 890.726248
+63
+mean(y=ax+beta*y) = 0.043222
+dotprod = 95950814.163560
+red = 276.621113
+63
+mean(y=ax+beta*y) = -20.671149
+dotprod = 149679573.195855
+red = -132295.352700
+63
+mean(y=ax+beta*y) = 44.929304
+dotprod = 96890922.611875
+red = 287547.548220
+63
+mean(y=ax+beta*y) = 0.395712
+dotprod = 1490108981.438680
+red = 2532.557175
+63
+mean(y=ax+beta*y) = 1.798297
+dotprod = 11734731.405469
+red = 11509.101275
+64
+mean(y=ax+beta*y) = -0.388487
+dotprod = 5452884.360117
+red = -2525.162928
+64
+mean(y=ax+beta*y) = -2.273161
+dotprod = 392133561.664672
+red = -14775.546876
+64
+mean(y=ax+beta*y) = -1.952110
+dotprod = 11458047.245414
+red = -12688.713265
+64
+mean(y=ax+beta*y) = -0.019941
+dotprod = 5174130.277802
+red = -129.616652
+64
+mean(y=ax+beta*y) = 38.619786
+dotprod = 145739791.157195
+red = 251028.610414
+64
+mean(y=ax+beta*y) = -0.046389
+dotprod = 12090217.675092
+red = -301.529658
+64
+mean(y=ax+beta*y) = -5.036518
+dotprod = 30734669.302144
+red = -32737.366508
+64
+mean(y=ax+beta*y) = 6.965886
+dotprod = 3531714.143731
+red = 45278.261912
+64
+mean(y=ax+beta*y) = -12.269752
+dotprod = 27745203.203042
+red = -79753.387564
+64
+mean(y=ax+beta*y) = -4.432684
+dotprod = 7935658.823432
+red = -28812.443062
+65
+mean(y=ax+beta*y) = 8.441381
+dotprod = 6898410.018697
+red = 55713.113587
+65
+mean(y=ax+beta*y) = -9.101400
+dotprod = 9574841543.105148
+red = -60069.241462
+65
+mean(y=ax+beta*y) = 1.775646
+dotprod = 14338728.421746
+red = 11719.265262
+65
+mean(y=ax+beta*y) = -13.287001
+dotprod = 56753176.940830
+red = -87694.203992
+65
+mean(y=ax+beta*y) = -3.357034
+dotprod = 5990783.259680
+red = -22156.424054
+65
+mean(y=ax+beta*y) = -12.939575
+dotprod = 7762672.720270
+red = -85401.193974
+65
+mean(y=ax+beta*y) = 19.454870
+dotprod = 10261888.805446
+red = 128402.142759
+65
+mean(y=ax+beta*y) = -13.942571
+dotprod = 103077789.473640
+red = -92020.967268
+65
+mean(y=ax+beta*y) = -6.251779
+dotprod = 40633117.083249
+red = -41261.740807
+65
+mean(y=ax+beta*y) = -512.173112
+dotprod = 3340259.410680
+red = -3380342.535921
+66
+mean(y=ax+beta*y) = 1.447858
+dotprod = 55555705.158607
+red = 9700.649796
+66
+mean(y=ax+beta*y) = 1.562232
+dotprod = 278743617.141205
+red = 10466.952539
+66
+mean(y=ax+beta*y) = 2.377295
+dotprod = 8669193.351734
+red = 15927.879605
+66
+mean(y=ax+beta*y) = -2.679075
+dotprod = 44178153.354995
+red = -17949.800814
+66
+mean(y=ax+beta*y) = -1.338973
+dotprod = 6652915.461826
+red = -8971.118447
+66
+mean(y=ax+beta*y) = -2.376013
+dotprod = 72282256.283305
+red = -15919.285787
+66
+mean(y=ax+beta*y) = 6.225501
+dotprod = 1126807993.104741
+red = 41710.854541
+66
+mean(y=ax+beta*y) = -7.072013
+dotprod = 109083909.148767
+red = -47382.489825
+66
+mean(y=ax+beta*y) = 36.106184
+dotprod = 11427848.630862
+red = 241911.435504
+66
+mean(y=ax+beta*y) = -8.571331
+dotprod = 644763508.960185
+red = -57427.915737
+67
+mean(y=ax+beta*y) = 2.152462
+dotprod = 5519226.181877
+red = 14636.744538
+67
+mean(y=ax+beta*y) = 7.267366
+dotprod = 97451339.055939
+red = 49418.087274
+67
+mean(y=ax+beta*y) = 5.324723
+dotprod = 183430069.562931
+red = 36208.113997
+67
+mean(y=ax+beta*y) = 52.049731
+dotprod = 78529211.555965
+red = 353938.174114
+67
+mean(y=ax+beta*y) = 4.620792
+dotprod = 58375489.236963
+red = 31421.386252
+67
+mean(y=ax+beta*y) = -5.915920
+dotprod = 11300923.735917
+red = -40228.256983
+67
+mean(y=ax+beta*y) = -3.541030
+dotprod = 706478445.165202
+red = -24079.004239
+67
+mean(y=ax+beta*y) = 26.384208
+dotprod = 84245663990.837753
+red = 179412.614384
+67
+mean(y=ax+beta*y) = -1.142154
+dotprod = 208083026.281514
+red = -7766.649667
+67
+mean(y=ax+beta*y) = -0.723545
+dotprod = 151874989.274765
+red = -4920.108271
+68
+mean(y=ax+beta*y) = 2.876115
+dotprod = 321777208.643085
+red = 19845.194662
+68
+mean(y=ax+beta*y) = 20.873398
+dotprod = 11179967906.474617
+red = 144026.443465
+68
+mean(y=ax+beta*y) = -13.646979
+dotprod = 4176725347.950219
+red = -94164.157506
+68
+mean(y=ax+beta*y) = 0.791489
+dotprod = 12443188.122971
+red = 5461.275534
+68
+mean(y=ax+beta*y) = 0.964185
+dotprod = 620040840.258359
+red = 6652.878573
+68
+mean(y=ax+beta*y) = 2.574633
+dotprod = 14457881.248992
+red = 17764.970910
+68
+mean(y=ax+beta*y) = -3.124532
+dotprod = 327945127.199499
+red = -21559.272484
+68
+mean(y=ax+beta*y) = -1.132717
+dotprod = 77805575.776282
+red = -7815.749427
+68
+mean(y=ax+beta*y) = -75.542337
+dotprod = 11250057.093334
+red = -521242.125000
+68
+mean(y=ax+beta*y) = 23.339259
+dotprod = 6774395.687341
+red = 161040.887694
+69
+mean(y=ax+beta*y) = -1.936916
+dotprod = 98679325.297330
+red = -13558.408694
+69
+mean(y=ax+beta*y) = -12.544057
+dotprod = 66381332.444504
+red = -87808.395641
+69
+mean(y=ax+beta*y) = -128.477582
+dotprod = 4071215.031329
+red = -899343.073350
+69
+mean(y=ax+beta*y) = -5.424724
+dotprod = 50096257.764914
+red = -37973.066858
+69
+mean(y=ax+beta*y) = 1.921979
+dotprod = 253347158.199378
+red = 13453.855987
+69
+mean(y=ax+beta*y) = -0.597125
+dotprod = 21790007.656888
+red = -4179.872793
+69
+mean(y=ax+beta*y) = -7.742245
+dotprod = 6717576.284154
+red = -54195.715663
+69
+mean(y=ax+beta*y) = 24.663361
+dotprod = 54019364.691574
+red = 172643.527751
+69
+mean(y=ax+beta*y) = 3.075847
+dotprod = 54555528.540490
+red = 21530.928176
+69
+mean(y=ax+beta*y) = 5.310586
+dotprod = 66305726.765320
+red = 37174.103417
+70
+mean(y=ax+beta*y) = -2.856756
+dotprod = 9530095.765453
+red = -20282.966005
+70
+mean(y=ax+beta*y) = 14.919563
+dotprod = 9349570.453306
+red = 105928.898472
+70
+mean(y=ax+beta*y) = 0.018198
+dotprod = 28843388.373910
+red = 129.202871
+70
+mean(y=ax+beta*y) = 1.282934
+dotprod = 20825514.110901
+red = 9108.831539
+70
+mean(y=ax+beta*y) = -1.456203
+dotprod = 11251910.729035
+red = -10339.042561
+70
+mean(y=ax+beta*y) = 2.254561
+dotprod = 6228568.092614
+red = 16007.386402
+70
+mean(y=ax+beta*y) = -5.775712
+dotprod = 250982560.633956
+red = -41007.556363
+70
+mean(y=ax+beta*y) = -25.835657
+dotprod = 38768124.169198
+red = -183433.161652
+70
+mean(y=ax+beta*y) = -4.556392
+dotprod = 9597963.940117
+red = -32350.381675
+70
+mean(y=ax+beta*y) = -4.874527
+dotprod = 15656087.129324
+red = -34609.138379
+71
+mean(y=ax+beta*y) = -0.488109
+dotprod = 35651668.227527
+red = -3514.381256
+71
+mean(y=ax+beta*y) = -5.919062
+dotprod = 35050242.847748
+red = -42617.246237
+71
+mean(y=ax+beta*y) = 56.841618
+dotprod = 674017388.218528
+red = 409259.646832
+71
+mean(y=ax+beta*y) = -2.571276
+dotprod = 15012790.834258
+red = -18513.190102
+71
+mean(y=ax+beta*y) = -5.984014
+dotprod = 112223598.392236
+red = -43084.898216
+71
+mean(y=ax+beta*y) = -1.790536
+dotprod = 30158168.286059
+red = -12891.856235
+71
+mean(y=ax+beta*y) = -1.575971
+dotprod = 139111318.794789
+red = -11346.988685
+71
+mean(y=ax+beta*y) = 3.589492
+dotprod = 25776016.296535
+red = 25844.340060
+71
+mean(y=ax+beta*y) = 4.377087
+dotprod = 96689832.697926
+red = 31515.028025
+71
+mean(y=ax+beta*y) = -17.814344
+dotprod = 98194132.498759
+red = -128263.279572
+72
+mean(y=ax+beta*y) = -5.346625
+dotprod = 103049010.747736
+red = -39030.365128
+72
+mean(y=ax+beta*y) = 2.404997
+dotprod = 1455835823.390625
+red = 17556.475875
+72
+mean(y=ax+beta*y) = -1.423579
+dotprod = 13703600.858712
+red = -10392.129064
+72
+mean(y=ax+beta*y) = -1.900086
+dotprod = 246555800.900322
+red = -13870.628739
+72
+mean(y=ax+beta*y) = 4.506723
+dotprod = 3275671.408046
+red = 32899.080219
+72
+mean(y=ax+beta*y) = -5.260861
+dotprod = 221222949.295469
+red = -38404.287732
+72
+mean(y=ax+beta*y) = 84.095175
+dotprod = 124803048.265427
+red = 613894.779094
+72
+mean(y=ax+beta*y) = 3.853528
+dotprod = 101156962.644443
+red = 28130.757333
+72
+mean(y=ax+beta*y) = 1.142272
+dotprod = 152840006.054116
+red = 8338.583121
+72
+mean(y=ax+beta*y) = 3.587300
+dotprod = 240919022.714843
+red = 26187.292831
+73
+mean(y=ax+beta*y) = -1.383675
+dotprod = 13612651.455700
+red = -10239.194072
+73
+mean(y=ax+beta*y) = 31.304840
+dotprod = 21399384.859365
+red = 231655.819393
+73
+mean(y=ax+beta*y) = -76.462019
+dotprod = 213903696.054200
+red = -565818.943970
+73
+mean(y=ax+beta*y) = 4.228226
+dotprod = 186845392.546073
+red = 31288.874443
+73
+mean(y=ax+beta*y) = -1.133815
+dotprod = 21870356.426894
+red = -8390.231925
+73
+mean(y=ax+beta*y) = -5.046972
+dotprod = 37669519.260146
+red = -37347.592854
+73
+mean(y=ax+beta*y) = -1.782753
+dotprod = 12797685.833564
+red = -13192.373850
+73
+mean(y=ax+beta*y) = 0.985138
+dotprod = 64740579.461155
+red = 7290.021221
+73
+mean(y=ax+beta*y) = 3.370986
+dotprod = 18638458.506187
+red = 24945.295030
+73
+mean(y=ax+beta*y) = -2.666794
+dotprod = 24308426.179962
+red = -19734.274256
+74
+mean(y=ax+beta*y) = -0.776898
+dotprod = 21077615.682405
+red = -5826.737348
+74
+mean(y=ax+beta*y) = 3.062210
+dotprod = 12065797.364936
+red = 22966.571658
+74
+mean(y=ax+beta*y) = -2.277650
+dotprod = 72075784.722015
+red = -17082.378522
+74
+mean(y=ax+beta*y) = -3.798872
+dotprod = 8661929.546005
+red = -28491.538813
+74
+mean(y=ax+beta*y) = 4.642504
+dotprod = 39545564.424721
+red = 34818.782584
+74
+mean(y=ax+beta*y) = -1.715688
+dotprod = 7663723.050850
+red = -12867.659910
+74
+mean(y=ax+beta*y) = -0.095521
+dotprod = 10231316.833494
+red = -716.410955
+74
+mean(y=ax+beta*y) = 8.658802
+dotprod = 71121800.681394
+red = 64941.011308
+74
+mean(y=ax+beta*y) = -12.739887
+dotprod = 240745746.168596
+red = -95549.149545
+74
+mean(y=ax+beta*y) = -11.560142
+dotprod = 51438427.260564
+red = -86701.064923
+75
+mean(y=ax+beta*y) = 4.900757
+dotprod = 29034376.301710
+red = 37245.756379
+75
+mean(y=ax+beta*y) = 15.226414
+dotprod = 16197940.796823
+red = 115720.744408
+75
+mean(y=ax+beta*y) = -2.182837
+dotprod = 10443346.068292
+red = -16589.564323
+75
+mean(y=ax+beta*y) = 8.632600
+dotprod = 27273028.373918
+red = 65607.761791
+75
+mean(y=ax+beta*y) = -3.823166
+dotprod = 4360486.379236
+red = -29056.058445
+75
+mean(y=ax+beta*y) = -1.596369
+dotprod = 3154125269.426505
+red = -12132.405142
+75
+mean(y=ax+beta*y) = 4.187024
+dotprod = 13301852.151264
+red = 31821.383236
+75
+mean(y=ax+beta*y) = 0.224218
+dotprod = 65401765.539942
+red = 1704.053007
+75
+mean(y=ax+beta*y) = -1.366029
+dotprod = 685888618.806234
+red = -10381.820343
+75
+mean(y=ax+beta*y) = 0.107181
+dotprod = 18599636.109506
+red = 814.572376
+76
+mean(y=ax+beta*y) = -7.234955
+dotprod = 29778737.828173
+red = -55709.151468
+76
+mean(y=ax+beta*y) = 1.035316
+dotprod = 13846194.521907
+red = 7971.934689
+76
+mean(y=ax+beta*y) = 2.737144
+dotprod = 20485488.255288
+red = 21076.006397
+76
+mean(y=ax+beta*y) = 2.231497
+dotprod = 86454034.932183
+red = 17182.525582
+76
+mean(y=ax+beta*y) = 15.348337
+dotprod = 12917029.610159
+red = 118182.197221
+76
+mean(y=ax+beta*y) = 7.962464
+dotprod = 78337358.328062
+red = 61310.975621
+76
+mean(y=ax+beta*y) = 1.514099
+dotprod = 19402485.440539
+red = 11658.561260
+76
+mean(y=ax+beta*y) = -0.226604
+dotprod = 11048706.274539
+red = -1744.850049
+76
+mean(y=ax+beta*y) = 20.024032
+dotprod = 58337854.345991
+red = 154185.044747
+76
+mean(y=ax+beta*y) = -4.147856
+dotprod = 62735372.543490
+red = -31938.487831
+77
+mean(y=ax+beta*y) = -12.410694
+dotprod = 30933982.391699
+red = -96803.416734
+77
+mean(y=ax+beta*y) = 2.463906
+dotprod = 11023147.996686
+red = 19218.469652
+77
+mean(y=ax+beta*y) = -5.924091
+dotprod = 9109576.977288
+red = -46207.909092
+77
+mean(y=ax+beta*y) = -2.400763
+dotprod = 11540478.389916
+red = -18725.951409
+77
+mean(y=ax+beta*y) = -0.776352
+dotprod = 52886498.000740
+red = -6055.542746
+77
+mean(y=ax+beta*y) = -26.273578
+dotprod = 40744184.296871
+red = -204933.909337
+77
+mean(y=ax+beta*y) = -4.148934
+dotprod = 227663354.646941
+red = -32361.687320
+77
+mean(y=ax+beta*y) = -4.841264
+dotprod = 8143166.405220
+red = -37761.859555
+77
+mean(y=ax+beta*y) = 1.728105
+dotprod = 40992190.478452
+red = 13479.222574
+77
+mean(y=ax+beta*y) = -5.740518
+dotprod = 362043908.043993
+red = -44776.041089
+78
+mean(y=ax+beta*y) = -25.780484
+dotprod = 84697147.929144
+red = -203665.822116
+78
+mean(y=ax+beta*y) = -0.675342
+dotprod = 20204827.141393
+red = -5335.198208
+78
+mean(y=ax+beta*y) = 3.040211
+dotprod = 9592492.312879
+red = 24017.665582
+78
+mean(y=ax+beta*y) = 0.025534
+dotprod = 8653330.156973
+red = 201.720808
+78
+mean(y=ax+beta*y) = -6.600035
+dotprod = 14571325.076811
+red = -52140.274537
+78
+mean(y=ax+beta*y) = 14.371939
+dotprod = 643793762.288928
+red = 113538.321438
+78
+mean(y=ax+beta*y) = -0.034959
+dotprod = 15847313.286492
+red = -276.172277
+78
+mean(y=ax+beta*y) = -0.551782
+dotprod = 37551595.419164
+red = -4359.075283
+78
+mean(y=ax+beta*y) = 5.885700
+dotprod = 96881644.551676
+red = 46497.033799
+78
+mean(y=ax+beta*y) = 5.342112
+dotprod = 78142181.953727
+red = 42202.687615
+79
+mean(y=ax+beta*y) = 21.654472
+dotprod = 16262804.732514
+red = 173235.777346
+79
+mean(y=ax+beta*y) = -7.226755
+dotprod = 5305421.724903
+red = -57814.040421
+79
+mean(y=ax+beta*y) = 2.137089
+dotprod = 454433865.801361
+red = 17096.714524
+79
+mean(y=ax+beta*y) = 15.742042
+dotprod = 1956285063.971488
+red = 125936.333244
+79
+mean(y=ax+beta*y) = -7.452094
+dotprod = 10657706.569410
+red = -59616.751039
+79
+mean(y=ax+beta*y) = 0.396219
+dotprod = 7988674.918384
+red = 3169.754010
+79
+mean(y=ax+beta*y) = -4.045766
+dotprod = 348921422.061867
+red = -32366.128971
+79
+mean(y=ax+beta*y) = 0.539384
+dotprod = 17153398.397017
+red = 4315.072410
+79
+mean(y=ax+beta*y) = 3.736419
+dotprod = 28122751.353878
+red = 29891.349297
+79
+mean(y=ax+beta*y) = 3.622945
+dotprod = 16055673.590684
+red = 28983.562755
+80
+mean(y=ax+beta*y) = -4.220824
+dotprod = 107981737.070835
+red = -34188.676016
+80
+mean(y=ax+beta*y) = -4.459302
+dotprod = 228463043.559276
+red = -36120.344013
+80
+mean(y=ax+beta*y) = -0.763568
+dotprod = 31589536.498362
+red = -6184.904588
+80
+mean(y=ax+beta*y) = -14.241250
+dotprod = 510964071.039055
+red = -115354.126833
+80
+mean(y=ax+beta*y) = 3.344564
+dotprod = 517335975.351765
+red = 27090.968039
+80
+mean(y=ax+beta*y) = -9.465188
+dotprod = 6935137954.314029
+red = -76668.021988
+80
+mean(y=ax+beta*y) = -13.469753
+dotprod = 17188602.541448
+red = -109104.999552
+80
+mean(y=ax+beta*y) = 1.751046
+dotprod = 10050540.086236
+red = 14183.473139
+80
+mean(y=ax+beta*y) = 5.552654
+dotprod = 7010157.537374
+red = 44976.500097
+80
+mean(y=ax+beta*y) = -2.133161
+dotprod = 1253502501.545891
+red = -17278.601208
+81
+mean(y=ax+beta*y) = 14.428555
+dotprod = 826695284.408544
+red = 118314.153924
+81
+mean(y=ax+beta*y) = -0.116409
+dotprod = 727322834.434221
+red = -954.552672
+81
+mean(y=ax+beta*y) = -9.954060
+dotprod = 137675580.772533
+red = -81623.294396
+81
+mean(y=ax+beta*y) = -14.533730
+dotprod = 474186100.797291
+red = -119176.582390
+81
+mean(y=ax+beta*y) = 4.877822
+dotprod = 159239788.057096
+red = 39998.138144
+81
+mean(y=ax+beta*y) = 2.664096
+dotprod = 4456404.305694
+red = 21845.585594
+81
+mean(y=ax+beta*y) = 0.982248
+dotprod = 99423669.076402
+red = 8054.434028
+81
+mean(y=ax+beta*y) = -19.224575
+dotprod = 4785104.527717
+red = -157641.517470
+81
+mean(y=ax+beta*y) = 0.058471
+dotprod = 199151594.642773
+red = 479.460061
+81
+mean(y=ax+beta*y) = -0.390946
+dotprod = 8695462.831688
+red = -3205.753415
+82
+mean(y=ax+beta*y) = -19.705720
+dotprod = 8376134.710847
+red = -163557.477225
+82
+mean(y=ax+beta*y) = -4.663218
+dotprod = 1535773524.868193
+red = -38704.705602
+82
+mean(y=ax+beta*y) = -8.078583
+dotprod = 1161028078.348572
+red = -67052.235127
+82
+mean(y=ax+beta*y) = -59.265078
+dotprod = 183120819.852340
+red = -491900.151067
+82
+mean(y=ax+beta*y) = -14.016749
+dotprod = 1366446877.958950
+red = -116339.014188
+82
+mean(y=ax+beta*y) = -37.130782
+dotprod = 158903355.552544
+red = -308185.492600
+82
+mean(y=ax+beta*y) = 21.604676
+dotprod = 53149051.731678
+red = 179318.806758
+82
+mean(y=ax+beta*y) = -4.776022
+dotprod = 150230550.303919
+red = -39640.983141
+82
+mean(y=ax+beta*y) = 5.209285
+dotprod = 1174634080.096492
+red = 43237.064735
+82
+mean(y=ax+beta*y) = -11.346307
+dotprod = 616374607.391917
+red = -94174.344856
+83
+mean(y=ax+beta*y) = -1.975872
+dotprod = 842432004.458415
+red = -16597.328605
+83
+mean(y=ax+beta*y) = 1.467739
+dotprod = 23882689.424071
+red = 12329.009238
+83
+mean(y=ax+beta*y) = 4.804645
+dotprod = 232208618.622384
+red = 40359.016800
+83
+mean(y=ax+beta*y) = 7.945947
+dotprod = 31874493.869210
+red = 66745.951021
+83
+mean(y=ax+beta*y) = -4.142121
+dotprod = 87097435.788227
+red = -34793.812855
+83
+mean(y=ax+beta*y) = -0.263901
+dotprod = 40624925.508853
+red = -2216.769168
+83
+mean(y=ax+beta*y) = 3.518340
+dotprod = 50018614.886764
+red = 29554.059143
+83
+mean(y=ax+beta*y) = -1.993426
+dotprod = 6992524.128360
+red = -16744.782203
+83
+mean(y=ax+beta*y) = -0.855271
+dotprod = 41861763.818333
+red = -7184.272323
+83
+mean(y=ax+beta*y) = -4.412472
+dotprod = 744896309.476652
+red = -37064.763980
+84
+mean(y=ax+beta*y) = -3.241005
+dotprod = 30720582.711048
+red = -27548.546189
+84
+mean(y=ax+beta*y) = -2.529762
+dotprod = 28006988.624431
+red = -21502.976233
+84
+mean(y=ax+beta*y) = 5.717131
+dotprod = 1736139169.078816
+red = 48595.611667
+84
+mean(y=ax+beta*y) = 4.291621
+dotprod = 27322209.027679
+red = 36478.777878
+84
+mean(y=ax+beta*y) = -13.878991
+dotprod = 221935086.405232
+red = -117971.426429
+84
+mean(y=ax+beta*y) = -8.690487
+dotprod = 250960827.347823
+red = -73869.138135
+84
+mean(y=ax+beta*y) = -1.706736
+dotprod = 29453657.753169
+red = -14507.253114
+84
+mean(y=ax+beta*y) = -5.709308
+dotprod = 740009871.543432
+red = -48529.116226
+84
+mean(y=ax+beta*y) = -5.878647
+dotprod = 9375088.915939
+red = -49968.502349
+84
+mean(y=ax+beta*y) = -15.152428
+dotprod = 4100141698.043206
+red = -128795.633895
+85
+mean(y=ax+beta*y) = -9.216923
+dotprod = 588554839.472423
+red = -79265.538951
+85
+mean(y=ax+beta*y) = -5.059000
+dotprod = 16045558.328955
+red = -43507.397032
+85
+mean(y=ax+beta*y) = 3.529549
+dotprod = 4297759.315634
+red = 30354.122942
+85
+mean(y=ax+beta*y) = 2.427011
+dotprod = 523446838.204568
+red = 20872.297696
+85
+mean(y=ax+beta*y) = -1.688329
+dotprod = 10077215.107156
+red = -14519.630050
+85
+mean(y=ax+beta*y) = 4.113181
+dotprod = 674188288.726246
+red = 35373.356415
+85
+mean(y=ax+beta*y) = -0.253967
+dotprod = 12498379.147357
+red = -2184.116268
+85
+mean(y=ax+beta*y) = -1.082231
+dotprod = 29863547.843905
+red = -9307.187518
+85
+mean(y=ax+beta*y) = 31.015304
+dotprod = 29837630765.219315
+red = 266731.617141
+85
+mean(y=ax+beta*y) = 2.823918
+dotprod = 56692584.370309
+red = 24285.697156
+86
+mean(y=ax+beta*y) = 1.677749
+dotprod = 4456603.471730
+red = 14596.414070
+86
+mean(y=ax+beta*y) = -13.617181
+dotprod = 1056971731.928251
+red = -118469.475026
+86
+mean(y=ax+beta*y) = 2.660948
+dotprod = 19207163.928381
+red = 23150.248816
+86
+mean(y=ax+beta*y) = -23.196658
+dotprod = 753246275.213104
+red = -201810.920665
+86
+mean(y=ax+beta*y) = 1.092598
+dotprod = 20067474.435902
+red = 9505.598387
+86
+mean(y=ax+beta*y) = 0.276349
+dotprod = 17695288.397734
+red = 2404.231968
+86
+mean(y=ax+beta*y) = -0.415286
+dotprod = 73124030.960327
+red = -3612.985380
+86
+mean(y=ax+beta*y) = 10.935674
+dotprod = 31491634.365878
+red = 95140.363675
+86
+mean(y=ax+beta*y) = 4.029490
+dotprod = 1730438616.860426
+red = 35056.565892
+86
+mean(y=ax+beta*y) = 1.985224
+dotprod = 67993567.490172
+red = 17271.446606
+87
+mean(y=ax+beta*y) = 1.948095
+dotprod = 19423823.728052
+red = 17143.239555
+87
+mean(y=ax+beta*y) = 0.787323
+dotprod = 13416979.516702
+red = 6928.441836
+87
+mean(y=ax+beta*y) = 0.626910
+dotprod = 1017359615.153977
+red = 5516.806263
+87
+mean(y=ax+beta*y) = 8.192811
+dotprod = 152797231.912275
+red = 72096.737946
+87
+mean(y=ax+beta*y) = -1.672005
+dotprod = 25409065.985321
+red = -14713.643528
+87
+mean(y=ax+beta*y) = -7.550935
+dotprod = 2214018549.379279
+red = -66448.228863
+87
+mean(y=ax+beta*y) = 11.956443
+dotprod = 358377551.470304
+red = 105216.698104
+87
+mean(y=ax+beta*y) = -0.118707
+dotprod = 116810725.607884
+red = -1044.625002
+87
+mean(y=ax+beta*y) = -0.095025
+dotprod = 327851766.880466
+red = -836.224116
+87
+mean(y=ax+beta*y) = -9.936732
+dotprod = 48771653.531025
+red = -87443.241381
+88
+mean(y=ax+beta*y) = -16.938068
+dotprod = 78301077.014393
+red = -150748.809559
+88
+mean(y=ax+beta*y) = -3.169186
+dotprod = 275411904.004614
+red = -28205.751556
+88
+mean(y=ax+beta*y) = -10.282207
+dotprod = 2944620.372361
+red = -91511.646558
+88
+mean(y=ax+beta*y) = 3.750710
+dotprod = 183639494.358435
+red = 33381.321120
+88
+mean(y=ax+beta*y) = 11.481292
+dotprod = 6043198.648553
+red = 102183.501149
+88
+mean(y=ax+beta*y) = 0.363013
+dotprod = 37361138.194005
+red = 3230.818315
+88
+mean(y=ax+beta*y) = 2.890009
+dotprod = 58275302.915390
+red = 25721.076178
+88
+mean(y=ax+beta*y) = 2.838024
+dotprod = 58890866.488587
+red = 25258.413574
+88
+mean(y=ax+beta*y) = 7.761217
+dotprod = 23544673.483068
+red = 69074.835391
+88
+mean(y=ax+beta*y) = -0.501964
+dotprod = 637189756.396515
+red = -4467.479542
+89
+mean(y=ax+beta*y) = 1.858851
+dotprod = 15518118.898290
+red = 16729.655061
+89
+mean(y=ax+beta*y) = 1.027905
+dotprod = 152293497.755853
+red = 9251.144898
+89
+mean(y=ax+beta*y) = -6.247787
+dotprod = 133654335.225180
+red = -56230.079488
+89
+mean(y=ax+beta*y) = 11.516238
+dotprod = 8343060.846889
+red = 103646.139382
+89
+mean(y=ax+beta*y) = -3.030295
+dotprod = 8209306.311889
+red = -27272.657852
+89
+mean(y=ax+beta*y) = 3.350607
+dotprod = 49606981.222543
+red = 30155.463139
+89
+mean(y=ax+beta*y) = -0.062523
+dotprod = 83244890.863425
+red = -562.704537
+89
+mean(y=ax+beta*y) = -34.375344
+dotprod = 474954611.502043
+red = -309378.093200
+89
+mean(y=ax+beta*y) = -2.953166
+dotprod = 18125052.417711
+red = -26578.493721
+89
+mean(y=ax+beta*y) = -13.910361
+dotprod = 1473474356.968886
+red = -125193.246642
+90
+mean(y=ax+beta*y) = -1.452064
+dotprod = 35264938.617907
+red = -13213.786800
+90
+mean(y=ax+beta*y) = -1.950955
+dotprod = 75666972.387452
+red = -17753.694227
+90
+mean(y=ax+beta*y) = -2.254686
+dotprod = 90467819.407470
+red = -20517.642326
+90
+mean(y=ax+beta*y) = -14.248730
+dotprod = 42471700.603842
+red = -129663.444626
+90
+mean(y=ax+beta*y) = 1.300574
+dotprod = 10684255.849632
+red = 11835.222763
+90
+mean(y=ax+beta*y) = 27.085573
+dotprod = 25188471.040135
+red = 246478.711793
+90
+mean(y=ax+beta*y) = -5.282835
+dotprod = 6350839.235919
+red = -48073.796525
+90
+mean(y=ax+beta*y) = -31.808996
+dotprod = 10619378.384087
+red = -289461.861263
+90
+mean(y=ax+beta*y) = -2.953977
+dotprod = 36034393.975936
+red = -26881.191996
+90
+mean(y=ax+beta*y) = -2.614228
+dotprod = 29728654.176491
+red = -23789.470594
+91
+mean(y=ax+beta*y) = 6.851603
+dotprod = 56273004.246874
+red = 63034.748401
+91
+mean(y=ax+beta*y) = -12.396831
+dotprod = 10249133.344305
+red = -114050.845054
+91
+mean(y=ax+beta*y) = 4.269585
+dotprod = 1892396930.031345
+red = 39280.183037
+91
+mean(y=ax+beta*y) = 26.332501
+dotprod = 315383753.524742
+red = 242259.005048
+91
+mean(y=ax+beta*y) = 13.563010
+dotprod = 27519649.386376
+red = 124779.690405
+91
+mean(y=ax+beta*y) = 27.660347
+dotprod = 263947229.917181
+red = 254475.196586
+91
+mean(y=ax+beta*y) = 1.309520
+dotprod = 8228231661.110398
+red = 12047.583419
+91
+mean(y=ax+beta*y) = 0.706996
+dotprod = 4574238.559684
+red = 6504.360332
+91
+mean(y=ax+beta*y) = 22.587905
+dotprod = 4143092246.395817
+red = 207808.728405
+91
+mean(y=ax+beta*y) = 0.389401
+dotprod = 15849561.874126
+red = 3582.484725
+92
+mean(y=ax+beta*y) = -8.720658
+dotprod = 22723109.455248
+red = -81102.114892
+92
+mean(y=ax+beta*y) = 26.100910
+dotprod = 87746684645.315231
+red = 242738.461573
+92
+mean(y=ax+beta*y) = -1.062087
+dotprod = 1131184839.596451
+red = -9877.408735
+92
+mean(y=ax+beta*y) = 3.045908
+dotprod = 28087152.421123
+red = 28326.943254
+92
+mean(y=ax+beta*y) = 98.927886
+dotprod = 55175107.079010
+red = 920029.335814
+92
+mean(y=ax+beta*y) = 1.391088
+dotprod = 44094180.605811
+red = 12937.121776
+92
+mean(y=ax+beta*y) = 0.388845
+dotprod = 59192518.480367
+red = 3616.257955
+92
+mean(y=ax+beta*y) = -20.223636
+dotprod = 33621507.057355
+red = -188079.813177
+92
+mean(y=ax+beta*y) = 21.605920
+dotprod = 793918651.977883
+red = 200935.058789
+92
+mean(y=ax+beta*y) = -28.632803
+dotprod = 77570441567.513123
+red = -266285.071415
+93
+mean(y=ax+beta*y) = -17.393103
+dotprod = 35465449.961299
+red = -163495.164895
+93
+mean(y=ax+beta*y) = 17.760470
+dotprod = 9343314.808708
+red = 166948.415961
+93
+mean(y=ax+beta*y) = 20.394269
+dotprod = 30970331.746482
+red = 191706.124936
+93
+mean(y=ax+beta*y) = 1.009202
+dotprod = 459080775.764116
+red = 9486.503082
+93
+mean(y=ax+beta*y) = -5.168879
+dotprod = 60410974.028875
+red = -48587.463804
+93
+mean(y=ax+beta*y) = 3.546730
+dotprod = 30420244.024447
+red = 33339.261116
+93
+mean(y=ax+beta*y) = 4.086292
+dotprod = 7473142.577934
+red = 38411.141400
+93
+mean(y=ax+beta*y) = 0.358284
+dotprod = 106341974.998317
+red = 3367.866754
+93
+mean(y=ax+beta*y) = 4.599786
+dotprod = 29084889.734809
+red = 43237.989181
+93
+mean(y=ax+beta*y) = 3.232093
+dotprod = 47060194.545258
+red = 30381.672360
+94
+mean(y=ax+beta*y) = -7.299189
+dotprod = 446323744.115738
+red = -69342.295667
+94
+mean(y=ax+beta*y) = 13.670434
+dotprod = 30913194941.426033
+red = 129869.122609
+94
+mean(y=ax+beta*y) = 5.834354
+dotprod = 263618852.044365
+red = 55426.359422
+94
+mean(y=ax+beta*y) = -1.690625
+dotprod = 122058396.721826
+red = -16060.934149
+94
+mean(y=ax+beta*y) = 13.073154
+dotprod = 554206675.477255
+red = 124194.958735
+94
+mean(y=ax+beta*y) = 2.514367
+dotprod = 2653610163.558812
+red = 23886.487069
+94
+mean(y=ax+beta*y) = -8.736405
+dotprod = 186444041.999616
+red = -82995.846358
+94
+mean(y=ax+beta*y) = -14.714185
+dotprod = 10475106.495535
+red = -139784.760246
+94
+mean(y=ax+beta*y) = 1.569333
+dotprod = 147213805.617082
+red = 14908.666594
+94
+mean(y=ax+beta*y) = -2016.515619
+dotprod = 1229757482.878242
+red = -19156898.382116
+95
+mean(y=ax+beta*y) = -14.897189
+dotprod = 4012368.334781
+red = -143013.011404
+95
+mean(y=ax+beta*y) = 5.340854
+dotprod = 28215007.100569
+red = 51272.202220
+95
+mean(y=ax+beta*y) = 5.272533
+dotprod = 63172997.481178
+red = 50616.318378
+95
+mean(y=ax+beta*y) = 1.508858
+dotprod = 37634418.380124
+red = 14485.034928
+95
+mean(y=ax+beta*y) = -7.176127
+dotprod = 155289548.367972
+red = -68890.816917
+95
+mean(y=ax+beta*y) = -4.397925
+dotprod = 511580102.397986
+red = -42220.076256
+95
+mean(y=ax+beta*y) = 11.348831
+dotprod = 13627611247.312399
+red = 108948.773878
+95
+mean(y=ax+beta*y) = -215.833152
+dotprod = 99372394.992804
+red = -2071998.257153
+95
+mean(y=ax+beta*y) = -10.629583
+dotprod = 205149474.855994
+red = -102044.000339
+95
+mean(y=ax+beta*y) = -5.121588
+dotprod = 1379323786.835021
+red = -49167.247061
+96
+mean(y=ax+beta*y) = -2.498043
+dotprod = 56692453.198849
+red = -24231.013961
+96
+mean(y=ax+beta*y) = -20.664663
+dotprod = 455461662.706755
+red = -200447.227521
+96
+mean(y=ax+beta*y) = 0.384712
+dotprod = 49703243.430967
+red = 3731.706656
+96
+mean(y=ax+beta*y) = -4.709108
+dotprod = 227790983.352259
+red = -45678.348370
+96
+mean(y=ax+beta*y) = -3.734186
+dotprod = 48379134.756422
+red = -36221.607442
+96
+mean(y=ax+beta*y) = -28.040524
+dotprod = 87490817029.476410
+red = -271993.086820
+96
+mean(y=ax+beta*y) = -416.567929
+dotprod = 29693874.376402
+red = -4040708.915049
+96
+mean(y=ax+beta*y) = 10.715920
+dotprod = 2022927207.261501
+red = 103944.426684
+96
+mean(y=ax+beta*y) = 5.114341
+dotprod = 51701396.463159
+red = 49609.105910
+96
+mean(y=ax+beta*y) = -2.675064
+dotprod = 30798866.003833
+red = -25948.120756
+97
+mean(y=ax+beta*y) = -4.320382
+dotprod = 61023492.398283
+red = -42339.742410
+97
+mean(y=ax+beta*y) = -2.155439
+dotprod = 264786041.512699
+red = -21123.306542
+97
+mean(y=ax+beta*y) = 0.625672
+dotprod = 189891856.286677
+red = 6131.587000
+97
+mean(y=ax+beta*y) = 2.955896
+dotprod = 2201190125.619984
+red = 28967.782551
+97
+mean(y=ax+beta*y) = 100.343906
+dotprod = 1587788941.167622
+red = 983370.274488
+97
+mean(y=ax+beta*y) = -68.082910
+dotprod = 242245908.476402
+red = -667212.517708
+97
+mean(y=ax+beta*y) = 2.901256
+dotprod = 18590341.552603
+red = 28432.310342
+97
+mean(y=ax+beta*y) = -49.966345
+dotprod = 79060720.839362
+red = -489670.180308
+97
+mean(y=ax+beta*y) = -23.544632
+dotprod = 27399087.231608
+red = -230737.394362
+97
+mean(y=ax+beta*y) = -0.465247
+dotprod = 102867716.023529
+red = -4559.417276
+98
+mean(y=ax+beta*y) = -54.761886
+dotprod = 46929403.011852
+red = -542142.671844
+98
+mean(y=ax+beta*y) = 8.300223
+dotprod = 1223983194.331538
+red = 82172.206982
+98
+mean(y=ax+beta*y) = -1.844206
+dotprod = 316756234.643613
+red = -18257.641914
+98
+mean(y=ax+beta*y) = 6.277256
+dotprod = 8153691.031389
+red = 62144.836203
+98
+mean(y=ax+beta*y) = 0.348082
+dotprod = 32493909.531633
+red = 3446.016599
+98
+mean(y=ax+beta*y) = -4.773219
+dotprod = 129276452.904585
+red = -47254.871725
+98
+mean(y=ax+beta*y) = -2.056060
+dotprod = 561181263.491340
+red = -20354.994524
+98
+mean(y=ax+beta*y) = 2.029388
+dotprod = 17569685.368898
+red = 20090.942176
+98
+mean(y=ax+beta*y) = -4.734679
+dotprod = 46842364.420701
+red = -46873.317351
+98
+mean(y=ax+beta*y) = 42.225915
+dotprod = 32884148.447166
+red = 418036.555326
+99
+mean(y=ax+beta*y) = -0.875607
+dotprod = 111522870.179137
+red = -8756.073287
+99
+mean(y=ax+beta*y) = 27.479027
+dotprod = 22018377.486971
+red = 274790.272301
+99
+mean(y=ax+beta*y) = 18.503947
+dotprod = 29802023768.613178
+red = 185039.469069
+99
+mean(y=ax+beta*y) = 24.536629
+dotprod = 5222735.104684
+red = 245366.285174
+99
+mean(y=ax+beta*y) = 25.034584
+dotprod = 148987218.052102
+red = 250345.842388
+99
+mean(y=ax+beta*y) = 1.342087
+dotprod = 1162996980.996986
+red = 13420.867694
+99
+mean(y=ax+beta*y) = -14.511400
+dotprod = 36551457.474294
+red = -145113.995941
+99
+mean(y=ax+beta*y) = 7.730059
+dotprod = 132599265.673892
+red = 77300.588566
+99
+mean(y=ax+beta*y) = -122.989964
+dotprod = 24511187.775328
+red = -1229899.638948
+99
+mean(y=ax+beta*y) = 7.621860
+dotprod = 59444233.696967
+red = 76218.598314
