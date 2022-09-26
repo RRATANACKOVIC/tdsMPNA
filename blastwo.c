@@ -4,6 +4,12 @@
 #include <omp.h>
 #include <time.h>
 
+struct mat
+{
+  int nolines, nocols;
+  double ** data;
+};
+
 unsigned long long rdtsc(void);
 int randxy(int x, int y);
 double randreal();
@@ -12,45 +18,57 @@ double mean(double *a, int size);
 double std(double *a, double meanval, int size);
 void printvec(int size, double* input);
 void writemeasures (int nfunc, int nomeasures,double **nflop, double **meanvals, double **stdvals, char **fnames, char *file);
+void initmat (struct mat *input, int cols, int lines);
+void printmat (struct mat *input);
+void randmat (struct mat *input);
+void freemat (struct mat *input);
+void transmat (struct mat *input, struct mat * output);
 
-void saxpy(int size, double a, double* x, double* y)// 2
-{
-  #pragma omp for
-	for(int i = 0; i<size; i++)
-	{
-		y[i] = a * y[i] + x[i];
-	}
-}
 
-double dotprod (int size, double beta, double* x, double* y)
+void dgemv (struct mat *A, double *x, double *y, int sx, int sy, double alpha, double beta)
 {
-	double output = beta;
-  #pragma omp reduction(+:output)
-	for(int i = 0; i<size; i++)
-	{
-		output += y[i] * x[i];
-	}
-	return output;
-}
-
-double red (int size, double* x)
-{
-  double output = x[0];
-  #pragma omp reduction(+:output)
-  for(int i = 1; i<size; i++)
+  if(A->nocols != sx)
   {
-    output +=x[i];
+    printf("Dimension mismatch (nocols of A and size of x)\n");
+    exit(1);
   }
-	return	output;
+  if(A->nolines != sy)
+  {
+    printf("Dimension mismatch (nolines of A and size of y)\n");
+    exit(1);
+  }
+  double z[sy];
+  for(int i = 0; i<A->nolines; i++)
+  {
+    z[i] = 0.0;
+    for(int j = 0; j<A->nocols; i++)
+    {
+      z[i] += x[j]*A->data[i][j];
+    }
+    y[i] = alpha*z[i]+beta*y[i];
+  }
 }
 
 int main(int argc, char** argv)
 {
+  /*
   if (argc != 4)
   {
     printf("invalid number of arguments ./prog maxsize numofmeasures filename\n");
     exit(0);
   }
+  */
+  struct mat damat, datransmat;
+  initmat(&damat, 4, 3);
+  dgemv(&damat, x, y, 4, 3, 1.0, 1.0);
+  printvec(3, y);
+  //printmat(&damat);
+  //transmat(&damat, &datransmat);
+  //printmat(&datransmat);
+  freemat(&damat);
+  //free(&datransmat);
+
+  /*
   int maxsize = atoi(argv[1]), nomeasures = atoi(argv[2]), step =maxsize/nomeasures, sizemeasures = maxsize/step+1;
   int nrep = 10, i = 0, j = 0, k = 0, nfunc = 3;
   char * filename = argv[3];
@@ -142,7 +160,7 @@ int main(int argc, char** argv)
   fclose(fp);
   free(x);
   free(y);
-
+*/
 
 	return 0;
 }
@@ -208,4 +226,62 @@ void printvec(int size, double* input)
 	{
 		printf("vector[%d] = %lf\n",i,*(input+i));
 	}
+}
+
+void initmat (struct mat *input, int cols, int lines)
+{
+  //data_soa struct
+  input->nolines = lines;
+  input->nocols = cols;
+  input->data = calloc(input->nolines, sizeof(double*));
+  for (int l = 0; l<input->nolines; l++)
+  {
+    input->data[l] = calloc(input->nocols,sizeof(double));
+  }
+}
+
+void freemat (struct mat *input)
+{
+  input->data = calloc(input->nolines, sizeof(double*));
+  for (int l = 0; l<input->nolines; l++)
+  {
+    free(input->data[l]) ;
+  }
+  free(input->data);
+
+}
+
+void printmat (struct mat *input)
+{
+  for (int l = 0; l<input->nolines; l++)
+  {
+    for (int c = 0; c<input->nocols; c++)
+    {
+      printf("%lf ", input->data[l][c]);
+    }
+    printf("\n");
+  }
+}
+
+void randmat (struct mat *input)
+{
+  for (int l = 0; l<input->nolines; l++)
+  {
+    for (int c = 0; c<input->nocols; c++)
+    {
+      input->data[l][c] = randreal();
+    }
+  }
+}
+
+void transmat (struct mat *input, struct mat * output)
+{
+  initmat(output, input->nolines, input->nocols);
+  for (int lin = 0; lin<input->nolines; lin++)
+  {
+    for (int cin = 0; cin<input->nocols; cin++)
+    {
+      output->data[cin][lin] = input->data[lin][cin];
+    }
+  }
 }
