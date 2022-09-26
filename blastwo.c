@@ -27,6 +27,7 @@ void transmat (struct mat *input, struct mat * output);
 
 void dgemv (struct mat *A, double *x, double *y, int sx, int sy, double alpha, double beta)
 {
+  // mem 64(i*j+3i+2+1)
   if(A->nocols != sx)
   {
     printf("Dimension mismatch (nocols of A and size of x)\n");
@@ -43,14 +44,15 @@ void dgemv (struct mat *A, double *x, double *y, int sx, int sy, double alpha, d
     z[i] = 0.0;
     for(int j = 0; j<A->nocols; j++)
     {
-      z[i] += x[j]*A->data[i][j];
+      z[i] += x[j]*A->data[i][j];// 2*i*j
     }
-    y[i] = alpha*z[i]+beta*y[i];
+    y[i] = alpha*z[i]+beta*y[i];// 3*j
   }
 }
 
 void dger (struct mat *A, double *x, double *y, int sx, int sy, double alpha)
 {
+  // mem 64(i*j+2i+1 +2)
   if(A->nolines != sx)
   {
     printf("Dimension mismatch (nocols of A and size of x)\n");
@@ -64,14 +66,14 @@ void dger (struct mat *A, double *x, double *y, int sx, int sy, double alpha)
   double z[sx];
   for(int k = 0; k<sx; k++)
   {
-    z[k] = alpha *x[k];
+    z[k] = alpha *x[k];//i
     double z[sy];
   }
   for(int i = 0; i<A->nolines; i++)
   {
     for(int j = 0; j<A->nocols; j++)
     {
-      A->data[i][j] = z[i]*y[j]+A->data[i][j];
+      A->data[i][j] = z[i]*y[j]+A->data[i][j];//2ij
     }
   }
 }
@@ -79,35 +81,12 @@ void dger (struct mat *A, double *x, double *y, int sx, int sy, double alpha)
 
 int main(int argc, char** argv)
 {
-  /*
   if (argc != 4)
   {
     printf("invalid number of arguments ./prog maxsize numofmeasures filename\n");
     exit(0);
   }
-  */
-  struct mat damat;
-  double *x, *y;
-  x = (double*)calloc(3, sizeof(double));
-  y = (double*)calloc(2, sizeof(double));
-  randvec(x, 3);
-  printvec(3,x);
-  randvec(y,2);
-  printvec(2,y);
-  initmat(&damat, 3, 2);
-  randmat(&damat);
-  printmat(&damat);
-  dgemv(&damat, x, y, 3, 2, 1.0, 1.0);
-  printvec(2,y);
-  dger(&damat, y, x, 2, 3, 1.0);
-  printmat(&damat);
-  //printmat(&damat);
-  //transmat(&damat, &datransmat);
-  //printmat(&datransmat);
-  freemat(&damat);
-  //free(&datransmat);
 
-  /*
   int maxsize = atoi(argv[1]), nomeasures = atoi(argv[2]), step =maxsize/nomeasures, sizemeasures = maxsize/step+1;
   int nrep = 10, i = 0, j = 0, k = 0, nfunc = 3;
   char * filename = argv[3];
@@ -118,7 +97,7 @@ int main(int argc, char** argv)
   double beta = randreal(), alpha = randreal(), rate = 0.0, res = 0.0;
 
   //file opening
-  char fnames[3][10] = {"saxpy", "dotprod", "red(+)"} ;
+  char fnames[3][10] = {"dgemv", "tdgemv", "dger"} ;
   FILE *fp;
   fp = fopen(filename, "w+");
   fprintf(fp,"\n");
@@ -137,12 +116,12 @@ int main(int argc, char** argv)
   {
     x = (double*)calloc(i, sizeof(double));
     y = (double*)calloc(i, sizeof(double));
-    nflop[0] = (double)(3*i);
-    nflop[1] = (double)(3*(i-1));
-    nflop[2] = (double)(i-1);
-    memory[0] = ((double)(sizeof(double)*(i+1)))/1024.0;
-    memory[1] = ((double)(sizeof(double)*(i+1)))/1024.0;
-    memory[2] = ((double)(sizeof(double)*i))/1024.0;
+    nflop[0] = (double)(2*i*i+3*i);
+    nflop[1] = nflop[0];
+    nflop[2] = (double)(2*i*i+i);
+    memory[0] = ((double)(sizeof(double)*(i*i+3*i+3)))/1024.0;
+    memory[1] = ((double)(sizeof(double)*(2*i*i+3*i+3)))/1024.0;
+    memory[2] = ((double)(sizeof(double)*(i*i+2*i+3)))/1024.0;
     for(j = 0; j<nrep; j++)
     {
       randvec(x,i);
@@ -315,7 +294,11 @@ void randmat (struct mat *input)
 
 void transmat (struct mat *input, struct mat * output)
 {
-  initmat(output, input->nolines, input->nocols);
+  #pragma omp single
+  {
+      initmat(output, input->nolines, input->nocols);
+  }
+  #pragma omp for
   for (int lin = 0; lin<input->nolines; lin++)
   {
     for (int cin = 0; cin<input->nocols; cin++)
