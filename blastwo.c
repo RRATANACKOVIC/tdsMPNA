@@ -41,13 +41,41 @@ void dgemv (struct mat *A, double *x, double *y, int sx, int sy, double alpha, d
   for(int i = 0; i<A->nolines; i++)
   {
     z[i] = 0.0;
-    for(int j = 0; j<A->nocols; i++)
+    for(int j = 0; j<A->nocols; j++)
     {
       z[i] += x[j]*A->data[i][j];
     }
     y[i] = alpha*z[i]+beta*y[i];
   }
 }
+
+void dger (struct mat *A, double *x, double *y, int sx, int sy, double alpha)
+{
+  if(A->nolines != sx)
+  {
+    printf("Dimension mismatch (nocols of A and size of x)\n");
+    exit(1);
+  }
+  if(A->nocols != sy)
+  {
+    printf("Dimension mismatch (nolines of A and size of y)\n");
+    exit(1);
+  }
+  double z[sx];
+  for(int k = 0; k<sx; k++)
+  {
+    z[k] = alpha *x[k];
+    double z[sy];
+  }
+  for(int i = 0; i<A->nolines; i++)
+  {
+    for(int j = 0; j<A->nocols; j++)
+    {
+      A->data[i][j] = z[i]*y[j]+A->data[i][j];
+    }
+  }
+}
+
 
 int main(int argc, char** argv)
 {
@@ -58,10 +86,21 @@ int main(int argc, char** argv)
     exit(0);
   }
   */
-  struct mat damat, datransmat;
-  initmat(&damat, 4, 3);
-  dgemv(&damat, x, y, 4, 3, 1.0, 1.0);
-  printvec(3, y);
+  struct mat damat;
+  double *x, *y;
+  x = (double*)calloc(3, sizeof(double));
+  y = (double*)calloc(2, sizeof(double));
+  randvec(x, 3);
+  printvec(3,x);
+  randvec(y,2);
+  printvec(2,y);
+  initmat(&damat, 3, 2);
+  randmat(&damat);
+  printmat(&damat);
+  dgemv(&damat, x, y, 3, 2, 1.0, 1.0);
+  printvec(2,y);
+  dger(&damat, y, x, 2, 3, 1.0);
+  printmat(&damat);
   //printmat(&damat);
   //transmat(&damat, &datransmat);
   //printmat(&datransmat);
