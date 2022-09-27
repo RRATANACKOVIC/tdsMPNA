@@ -25,32 +25,30 @@ void freemat (struct mat *input);
 void transmat (struct mat *input, struct mat * output);
 
 
-void dgemv (struct mat *A, double *x, double *y, int sx, int sy, double alpha, double beta)
+void dgemm (struct mat *A, struct mat *B, struct mat *C, double alpha, double beta)
 {
   // mem 64(i*j+3i+2+1)
   #pragma omp single
   {
-    if(A->nocols != sx)
+    if( (A->nocols != B->nolines) || (A->nolines != C->nolines) || (B->nocols != C->nocols) )
     {
-      printf("Dimension mismatch (nocols of A and size of x)\n");
-      exit(1);
-    }
-    if(A->nolines != sy)
-    {
-      printf("Dimension mismatch (nolines of A and size of y)\n");
+      printf("Dimension mismatch \n");
       exit(1);
     }
   }
-    double z[sy];
+  double temp = 0.0;
   #pragma omp for
   for(int i = 0; i<A->nolines; i++)
   {
-    z[i] = 0.0;
-    for(int j = 0; j<A->nocols; j++)
+    for(int j = 0; j<B->nolines; j++)
     {
-      z[i] += x[j]*A->data[i][j];// 2*i*j
+      temp = 0;
+      for(int k = 0; k< A->nocols; k++)
+      {
+        temp += A->data[i][k]*B[j][k];
+      }
+      C[i][j] = alpha*temp + beta* C[i][j];
     }
-    y[i] = alpha*z[i]+beta*y[i];// 3*j
   }
 }
 
@@ -134,8 +132,6 @@ int main(int argc, char** argv)
     memory[2] = ((double)(sizeof(double)*(i*i+2*i+3)))/1024.0;
     for(j = 0; j<nrep; j++)
     {
-      randvec(x,i);
-      randvec(y,i);
       randmat(&A);
       #pragma omp parallel
       {
