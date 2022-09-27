@@ -28,17 +28,21 @@ void transmat (struct mat *input, struct mat * output);
 void dgemv (struct mat *A, double *x, double *y, int sx, int sy, double alpha, double beta)
 {
   // mem 64(i*j+3i+2+1)
-  if(A->nocols != sx)
+  #pragma omp single
   {
-    printf("Dimension mismatch (nocols of A and size of x)\n");
-    exit(1);
-  }
-  if(A->nolines != sy)
-  {
-    printf("Dimension mismatch (nolines of A and size of y)\n");
-    exit(1);
+    if(A->nocols != sx)
+    {
+      printf("Dimension mismatch (nocols of A and size of x)\n");
+      exit(1);
+    }
+    if(A->nolines != sy)
+    {
+      printf("Dimension mismatch (nolines of A and size of y)\n");
+      exit(1);
+    }
   }
   double z[sy];
+  #pragma omp for
   for(int i = 0; i<A->nolines; i++)
   {
     z[i] = 0.0;
@@ -53,22 +57,26 @@ void dgemv (struct mat *A, double *x, double *y, int sx, int sy, double alpha, d
 void dger (struct mat *A, double *x, double *y, int sx, int sy, double alpha)
 {
   // mem 64(i*j+2i+1 +2)
-  if(A->nolines != sx)
+  #pragma omp single
   {
-    printf("Dimension mismatch (nocols of A and size of x)\n");
-    exit(1);
-  }
-  if(A->nocols != sy)
-  {
-    printf("Dimension mismatch (nolines of A and size of y)\n");
-    exit(1);
+    if(A->nolines != sx)
+    {
+      printf("Dimension mismatch (nocols of A and size of x)\n");
+      exit(1);
+    }
+    if(A->nocols != sy)
+    {
+      printf("Dimension mismatch (nolines of A and size of y)\n");
+      exit(1);
+    }
   }
   double z[sx];
+  #pragma omp for
   for(int k = 0; k<sx; k++)
   {
     z[k] = alpha *x[k];//i
-    double z[sy];
   }
+  #pragma omp for
   for(int i = 0; i<A->nolines; i++)
   {
     for(int j = 0; j<A->nocols; j++)
@@ -95,6 +103,7 @@ int main(int argc, char** argv)
   double ticks[nfunc][nrep];
   double *x, *y;
   double beta = randreal(), alpha = randreal(), rate = 0.0, res = 0.0;
+  struct mat A, TA;
 
   //file opening
   char fnames[3][10] = {"dgemv", "tdgemv", "dger"} ;
@@ -116,6 +125,7 @@ int main(int argc, char** argv)
   {
     x = (double*)calloc(i, sizeof(double));
     y = (double*)calloc(i, sizeof(double));
+    initmat(&A, i, i);
     nflop[0] = (double)(2*i*i+3*i);
     nflop[1] = nflop[0];
     nflop[2] = (double)(2*i*i+i);
@@ -126,35 +136,37 @@ int main(int argc, char** argv)
     {
       randvec(x,i);
       randvec(y,i);
+      randmat(&A);
       #pragma omp parallel
       {
         #pragma omp single
         {
           start = rdtsc();
         }
-        saxpy(i,alpha, x, y);
+        dgemv (&A, x, y, i, i, alpha, beta);
         #pragma omp single
         {
           end = rdtsc();
           printf("%d\n",k);
-          printf("mean(y=ax+beta*y) = %lf\n", mean(y,i));
+          printf("dgemv = %lf\n", mean(y,i));
           ticks[0][j] = (double)(end -start);
           start = rdtsc();
         }
-        res = dotprod (i, beta, x, y);
+        transmat(&A, &TA);
+        dgemv (&TA, x, y, i, i, alpha, beta);
         #pragma omp single
         {
           end = rdtsc();
           ticks[1][j] = (double)(end -start);
-          printf("dotprod = %lf\n",res);
+          printf("dtgem = %lf\n",mean(y,i));
           start = rdtsc();
         }
-        res = red(i, y);
+        dger(&A, x, y, i, i, alpha);
         #pragma omp single
         {
           end = rdtsc();
           ticks[2][j] = (double)(end -start);
-          printf("red = %lf\n",res);
+          printf("dger = %lf\n",A.data[i/2][i/2]);
 
         }
       }
@@ -178,7 +190,8 @@ int main(int argc, char** argv)
   fclose(fp);
   free(x);
   free(y);
-*/
+  freemat(&A);
+
 
 	return 0;
 }
