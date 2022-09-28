@@ -45,45 +45,53 @@ void dgemm (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
       temp = 0;
       for(int k = 0; k< A->nocols; k++)
       {
-        temp += A->data[i][k]*B[j][k];
+        temp += A->data[i][k]*B->data[j][k];
       }
-      C[i][j] = alpha*temp + beta* C[i][j];
+      C->data[i][j] = alpha*temp + beta* C->data[i][j];
     }
   }
 }
 
-void dger (struct mat *A, double *x, double *y, int sx, int sy, double alpha)
+
+
+void dsyrk (struct mat *A, struct mat *B, struct mat *C, double alpha, double beta)
 {
-  // mem 64(i*j+2i+1 +2)
+  // mem 64(i*j+3i+2+1)
   #pragma omp single
   {
-    if(A->nolines != sx)
+    if( (A->nocols != B->nolines) || (A->nolines != C->nolines) || (B->nocols != C->nocols) )
     {
-      printf("Dimension mismatch (nocols of A and size of x)\n");
-      exit(1);
-    }
-    if(A->nocols != sy)
-    {
-      printf("Dimension mismatch (nolines of A and size of y)\n");
+      printf("Dimension mismatch \n");
       exit(1);
     }
   }
-  double z[sx];
-  #pragma omp for
-  for(int k = 0; k<sx; k++)
-  {
-    z[k] = alpha *x[k];//i
-  }
+  struct mat TA, TB;
+  transmat(A, &TA);
+  transmat(B, &TB);
   #pragma omp for
   for(int i = 0; i<A->nolines; i++)
   {
-    for(int j = 0; j<A->nocols; j++)
+    for(int j = 0; j<B->nolines; j++)
     {
-      A->data[i][j] = z[i]*y[j]+A->data[i][j];//2ij
+      for(int k = 0; k< A->nocols; k++)
+      {
+        C->data[i][j] += alpha*A->data[i][k]*TB.data[k][j] + beta*B->data[i][k]*TA.data[k][j];
+      }
     }
   }
 }
 
+
+
+
+double trace (struct mat *input)
+{
+  double output = 0.0;
+  for (int i = 0; i<input->nolines; i++)
+  {
+    output += input->data[i][i];
+  }
+}
 
 int main(int argc, char** argv)
 {
@@ -94,17 +102,17 @@ int main(int argc, char** argv)
   }
 
   int maxsize = atoi(argv[1]), nomeasures = atoi(argv[2]), step =maxsize/nomeasures, sizemeasures = maxsize/step+1;
-  int nrep = 10, i = 0, j = 0, k = 0, nfunc = 3;
+  int nrep = 10, i = 0, j = 0, k = 0, nfunc = 2;
   char * filename = argv[3];
   unsigned long long start = 0, end = 0, nocycles = 0;
   double meanvals[nfunc], stdvals[nfunc], nflop[nfunc], memory[nfunc];
   double ticks[nfunc][nrep];
   double *x, *y;
   double beta = randreal(), alpha = randreal(), rate = 0.0, res = 0.0;
-  struct mat A, TA;
+  struct mat A, TA, B, TB, C;
 
   //file opening
-  char fnames[3][10] = {"dgemv", "tdgemv", "dger"} ;
+  char fnames[3][10] = {"dgemm", "tdgemv"} ;
   FILE *fp;
   fp = fopen(filename, "w+");
   fprintf(fp,"\n");
@@ -121,9 +129,9 @@ int main(int argc, char** argv)
 
   for(i = step; i<=maxsize; i+=step)
   {
-    x = (double*)calloc(i, sizeof(double));
-    y = (double*)calloc(i, sizeof(double));
     initmat(&A, i, i);
+    initmat(&B, i, i);
+    initmat(&C, i, i);
     nflop[0] = (double)(2*i*i+3*i);
     nflop[1] = nflop[0];
     nflop[2] = (double)(2*i*i+i);
@@ -133,23 +141,25 @@ int main(int argc, char** argv)
     for(j = 0; j<nrep; j++)
     {
       randmat(&A);
+      randmat(&B);
+      randmat(&B);
       #pragma omp parallel
       {
         #pragma omp single
         {
           start = rdtsc();
         }
-        dgemv (&A, x, y, i, i, alpha, beta);
+        dgemm (&A, &B, &C, alpha, beta);
         #pragma omp single
         {
           end = rdtsc();
           printf("%d\n",k);
-          printf("dgemv = %lf\n", mean(y,i));
+          printf("dgemv = %lf\n", trace(&C));
           ticks[0][j] = (double)(end -start);
           start = rdtsc();
         }
         transmat(&A, &TA);
-        dgemv (&TA, x, y, i, i, alpha, beta);
+        //dgemm (&TA, x, y, i, i, alpha, beta);
         #pragma omp single
         {
           end = rdtsc();
@@ -157,7 +167,7 @@ int main(int argc, char** argv)
           printf("dtgem = %lf\n",mean(y,i));
           start = rdtsc();
         }
-        dger(&A, x, y, i, i, alpha);
+        //dger(&A, x, y, i, i, alpha);
         #pragma omp single
         {
           end = rdtsc();
@@ -303,10 +313,7 @@ void randmat (struct mat *input)
 
 void transmat (struct mat *input, struct mat * output)
 {
-  #pragma omp single
-  {
-      initmat(output, input->nolines, input->nocols);
-  }
+  initmat(output, input->nolines, input->nocols);
   #pragma omp for
   for (int lin = 0; lin<input->nolines; lin++)
   {
