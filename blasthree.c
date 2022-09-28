@@ -83,9 +83,6 @@ void dsyrk (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
   }
 }
 
-
-
-
 double trace (struct mat *input)
 {
   double output = 0.0;
@@ -107,7 +104,10 @@ int main(int argc, char** argv)
   int maxsize = atoi(argv[1]), nomeasures = atoi(argv[2]), step =maxsize/nomeasures, sizemeasures = maxsize/step+1;
   int nrep = 10, i = 0, j = 0, k = 0, nfunc = 2;
   char * filename = argv[3];
+
   unsigned long long start = 0, end = 0, nocycles = 0;
+  struct timespec tstart={0,0}, tend={0,0};
+
   double meanvals[nfunc], stdvals[nfunc], nflop[nfunc], memory[nfunc];
   double ticks[nfunc][nrep];
   double *x, *y;
@@ -126,7 +126,8 @@ int main(int argc, char** argv)
   fprintf(fp,"\n");
   for(int i = 0; i<nfunc; i++)
   {
-      fprintf(fp,"no.elts;M.N.O.T;T.std; nflop;size(kB);");
+      //fprintf(fp,"no.elts;M.N.O.T;T.std; nflop;size(kB);");
+      fprintf(fp,"no.elts;M.RT(ns);RT.std (ns); nflop;size(kB);");
   }
   fprintf(fp,"\n");
 
@@ -148,22 +149,28 @@ int main(int argc, char** argv)
       {
         #pragma omp single
         {
-          start = rdtsc();
+          //start = rdtsc();
+          clock_gettime(CLOCK_MONOTONIC_RAW, &tstart);
         }
         dgemm (&A, &B, &C, alpha, beta);
         #pragma omp single
         {
-          end = rdtsc();
+          //end = rdtsc();
+          clock_gettime(CLOCK_MONOTONIC_RAW, &tend);
           printf("%d\n",k);
           printf("dgemv = %lf\n", trace(&C));
-          ticks[0][j] = (double)(end -start);
-          start = rdtsc();
+          //ticks[0][j] = (double)(end -start);
+          ticks[0][j] = (double)(tend.tv_nsec -tstart.tv_nsec);
+          //start = rdtsc();
+          clock_gettime(CLOCK_MONOTONIC_RAW, &tstart);
         }
         dgemm (&A, &B, &C, alpha, beta);
         #pragma omp single
         {
-          end = rdtsc();
-          ticks[1][j] = (double)(end -start);
+          //end = rdtsc();
+          clock_gettime(CLOCK_MONOTONIC_RAW, &tend);
+          //ticks[1][j] = (double)(end -start);
+          ticks[1][j] = (double)(tend.tv_nsec -tstart.tv_nsec);
           printf("dsyrk = %lf\n",trace(&C));
         }
       }
