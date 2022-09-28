@@ -37,6 +37,8 @@ void dgemm (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
     }
   }
   double temp = 0.0;
+  struct mat TB;
+  transmat(B,&TB);
   #pragma omp for
   for(int i = 0; i<A->nolines; i++)
   {
@@ -45,7 +47,7 @@ void dgemm (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
       temp = 0;
       for(int k = 0; k< A->nocols; k++)
       {
-        temp += A->data[i][k]*B->data[j][k];//2i
+        temp += A->data[i][k]*TB->data[j][k];//2i
       }
       C->data[i][j] = alpha*temp + beta* C->data[i][j];// 3 i**2
     }
@@ -66,8 +68,8 @@ void dsyrk (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
     }
   }
   struct mat TA, TB;
-  transmat(A, &TA);
-  transmat(B, &TB);
+  //transmat(A, &TA);
+  //transmat(B, &TB);
   #pragma omp for
   for(int i = 0; i<A->nolines; i++)
   {
@@ -75,7 +77,7 @@ void dsyrk (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
     {
       for(int k = 0; k< A->nocols; k++)
       {
-        C->data[i][j] += alpha*A->data[i][k]*TB.data[k][j] + beta*B->data[i][k]*TA.data[k][j];//6 i**3
+        C->data[i][j] += alpha*A->data[i][k]*B.data[j][k] + beta*B->data[i][k]*A.data[j][k];//6 i**3
       }
     }
   }
