@@ -45,9 +45,9 @@ void dgemm (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
       temp = 0;
       for(int k = 0; k< A->nocols; k++)
       {
-        temp += A->data[i][k]*B->data[j][k];
+        temp += A->data[i][k]*B->data[j][k];//2i
       }
-      C->data[i][j] = alpha*temp + beta* C->data[i][j];
+      C->data[i][j] = alpha*temp + beta* C->data[i][j];// 3 i**2
     }
   }
 }
@@ -75,7 +75,7 @@ void dsyrk (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
     {
       for(int k = 0; k< A->nocols; k++)
       {
-        C->data[i][j] += alpha*A->data[i][k]*TB.data[k][j] + beta*B->data[i][k]*TA.data[k][j];
+        C->data[i][j] += alpha*A->data[i][k]*TB.data[k][j] + beta*B->data[i][k]*TA.data[k][j];//6 i**3
       }
     }
   }
@@ -91,6 +91,7 @@ double trace (struct mat *input)
   {
     output += input->data[i][i];
   }
+  return output;
 }
 
 int main(int argc, char** argv)
@@ -112,7 +113,7 @@ int main(int argc, char** argv)
   struct mat A, TA, B, TB, C;
 
   //file opening
-  char fnames[3][10] = {"dgemm", "tdgemv"} ;
+  char fnames[2][10] = {"dgemm", "dsyrk"};
   FILE *fp;
   fp = fopen(filename, "w+");
   fprintf(fp,"\n");
@@ -132,17 +133,15 @@ int main(int argc, char** argv)
     initmat(&A, i, i);
     initmat(&B, i, i);
     initmat(&C, i, i);
-    nflop[0] = (double)(2*i*i+3*i);
+    nflop[0] = (double)(6*i*i+2);
     nflop[1] = nflop[0];
-    nflop[2] = (double)(2*i*i+i);
-    memory[0] = ((double)(sizeof(double)*(i*i+3*i+3)))/1024.0;
-    memory[1] = ((double)(sizeof(double)*(2*i*i+3*i+3)))/1024.0;
-    memory[2] = ((double)(sizeof(double)*(i*i+2*i+3)))/1024.0;
+    memory[0] = ((double)(sizeof(double)*(2*i*i+2)))/1024.0;
+    memory[1] = ((double)(sizeof(double)*(4*i*i+2)))/1024.0;
     for(j = 0; j<nrep; j++)
     {
       randmat(&A);
       randmat(&B);
-      randmat(&B);
+      randmat(&C);
       #pragma omp parallel
       {
         #pragma omp single
@@ -158,22 +157,12 @@ int main(int argc, char** argv)
           ticks[0][j] = (double)(end -start);
           start = rdtsc();
         }
-        transmat(&A, &TA);
-        //dgemm (&TA, x, y, i, i, alpha, beta);
+        dgemm (&A, &B, &C, alpha, beta);
         #pragma omp single
         {
           end = rdtsc();
           ticks[1][j] = (double)(end -start);
-          printf("dtgem = %lf\n",mean(y,i));
-          start = rdtsc();
-        }
-        //dger(&A, x, y, i, i, alpha);
-        #pragma omp single
-        {
-          end = rdtsc();
-          ticks[2][j] = (double)(end -start);
-          printf("dger = %lf\n",A.data[i/2][i/2]);
-
+          printf("dsyrk = %lf\n",trace(&C));
         }
       }
     }
@@ -183,9 +172,6 @@ int main(int argc, char** argv)
     //dotprod
     meanvals[1] = mean(*(ticks+1), nrep);
     stdvals[1] = std(*(ticks+1), meanvals[1], nrep);
-    //reduction (/)
-    meanvals[2] = mean(*(ticks+2), nrep);
-    stdvals[2] = std(*(ticks+2), meanvals[2], nrep);
     for(int j = 0; j<nfunc; j++)
     {
         fprintf(fp,"%d;%f;%f;%f;%f;", i, meanvals[j], stdvals[j], nflop[j], memory[j]);
