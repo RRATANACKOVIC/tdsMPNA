@@ -50,7 +50,7 @@ void dgemv (struct mat *A, double *x, double *y, int sx, int sy, double alpha, d
     {
       z[i] += x[j]*A->data[i][j];// 2*i*j
     }
-    y[i] = alpha*z[i]+beta*y[i];// 3*j
+    y[i] = alpha*z[i]+beta*y[i];// 3*i
   }
 }
 

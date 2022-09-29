@@ -27,7 +27,7 @@ void transmat (struct mat *input, struct mat * output);
 
 void dgemm (struct mat *A, struct mat *B, struct mat *C, double alpha, double beta)
 {
-  // mem 64(i*j+3i+2+1)
+  // mem 64(3*i*j+5)
   #pragma omp single
   {
     if( (A->nocols != B->nolines) || (A->nolines != C->nolines) || (B->nocols != C->nocols) )
@@ -47,7 +47,7 @@ void dgemm (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
       temp = 0;
       for(int k = 0; k< A->nocols; k++)
       {
-        temp += A->data[i][k]*TB->data[j][k];//2i
+        temp += A->data[i][k]*TB.data[j][k];//2i
       }
       C->data[i][j] = alpha*temp + beta* C->data[i][j];// 3 i**2
     }
@@ -58,7 +58,7 @@ void dgemm (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
 
 void dsyrk (struct mat *A, struct mat *B, struct mat *C, double alpha, double beta)
 {
-  // mem 64(i*j+3i+2+1)
+  // mem 64(3*i*j+5)
   #pragma omp single
   {
     if( (A->nocols != B->nolines) || (A->nolines != C->nolines) || (B->nocols != C->nocols) )
@@ -67,7 +67,7 @@ void dsyrk (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
       exit(1);
     }
   }
-  struct mat TA, TB;
+  //struct mat TA, TB;
   //transmat(A, &TA);
   //transmat(B, &TB);
   #pragma omp for
@@ -77,7 +77,7 @@ void dsyrk (struct mat *A, struct mat *B, struct mat *C, double alpha, double be
     {
       for(int k = 0; k< A->nocols; k++)
       {
-        C->data[i][j] += alpha*A->data[i][k]*B.data[j][k] + beta*B->data[i][k]*A.data[j][k];//6 i**3
+        C->data[i][j] += alpha*A->data[i][k]*B->data[j][k] + beta*B->data[i][k]*A->data[j][k];//6 i**3
       }
     }
   }
@@ -136,10 +136,10 @@ int main(int argc, char** argv)
     initmat(&A, i, i);
     initmat(&B, i, i);
     initmat(&C, i, i);
-    nflop[0] = (double)(6*i*i+2);
-    nflop[1] = nflop[0];
-    memory[0] = ((double)(sizeof(double)*(2*i*i+2)))/1024.0;
-    memory[1] = ((double)(sizeof(double)*(4*i*i+2)))/1024.0;
+    nflop[0] = (double)(5*i*i);
+    nflop[1] = (double)(6*i*i);
+    memory[0] = ((double)(sizeof(double)*(4*i*i+5)))/1024.0;
+    memory[1] = ((double)(sizeof(double)*(3*i*i+5)))/1024.0;
     for(j = 0; j<nrep; j++)
     {
       randmat(&A);

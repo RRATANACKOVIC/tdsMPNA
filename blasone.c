@@ -18,7 +18,7 @@ void saxpy(int size, double a, double* x, double* y)// 2
   #pragma omp for
 	for(int i = 0; i<size; i++)
 	{
-		y[i] = a * y[i] + x[i];
+		y[i] = a * y[i] + x[i];//2
 	}
 }
 
@@ -84,10 +84,10 @@ int main(int argc, char** argv)
   {
     x = (double*)calloc(i, sizeof(double));
     y = (double*)calloc(i, sizeof(double));
-    nflop[0] = (double)(3*i);
-    nflop[1] = (double)(3*(i-1));
+    nflop[0] = (double)(2*i);
+    nflop[1] = (double)(2*(i-1));
     nflop[2] = (double)(i-1);
-    memory[0] = ((double)(sizeof(double)*(i+1)))/1024.0;
+    memory[0] = ((double)(sizeof(double)*(2*i+1)))/1024.0;
     memory[1] = ((double)(sizeof(double)*(i+1)))/1024.0;
     memory[2] = ((double)(sizeof(double)*i))/1024.0;
     for(j = 0; j<nrep; j++)
