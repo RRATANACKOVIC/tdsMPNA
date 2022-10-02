@@ -134,6 +134,7 @@ double norme_frobenius(double **A, int nolines, int nocols)
   }
 }
 
+
 struct gso cgs(double **A, double *v, int n, int m)
 {
   struct gso output;
@@ -141,7 +142,31 @@ struct gso cgs(double **A, double *v, int n, int m)
   output.n = n;
   output.Hm = initmat(n,m);
   output.Vm = initmat(n,m);
-  output.Hm[0][0] = 3.14159;
-  output.Vm[0][0] = 2.71828;
+  double *qj = initvec(n);
+  double * w = initvec(n);
+  for(int k = 0; k<n; k++)
+  {
+    for(int i = 0; i<n; i++)
+    {
+      w[i] = A[i][k];
+    }
+    for(int j = 0; j<k; k++)
+    {
+      output.Hm[j][k] = dotprod (w,qj,n);
+    }
+    for(int i = 0; i<n; i++)
+    {
+      for(int j = 0; j<k; k++)
+      {
+        w[i]-= output.Hm[j][k]*qj[i];
+      }
+    }
+    output.Hm[k][k] = norme_euclide (w, n);
+    for(int i = 0; i<n; i++)
+    {
+      qj[i] = w[i]/output.hm[k][k];
+    }
+  }
+
   return output;
 }
