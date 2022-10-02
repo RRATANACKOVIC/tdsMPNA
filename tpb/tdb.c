@@ -134,6 +134,47 @@ double norme_frobenius(double **A, int nolines, int nocols)
   }
 }
 
+double **getQ(double **A, double *v, int n, int m)
+{
+  double q = initmat(m,n);
+  //for(int l = 0; )
+}
+
+double **gs(double **A, double *v, int n, int m)
+{
+  double **output = (double**)malloc(n*sizeof(double*));
+  double dp = 0.0;
+  for(int i = 0; i<n; i++)
+  {
+    output[i] = (double*)calloc(m, sizeof(double));
+  }
+  double normpmo = 1.0/norme_euclide(A[0], n);
+  for(int i = 0; i<n; i++)
+  {
+    output[0][i] = normpmo * A[0][i];
+  }
+  for(int i = 1; i<m; i++)
+  {
+    for(int p = 0; p<n; p++)
+    {
+      output[i][p] = A[i][p];
+    }
+    for(int j = 0; j<j-1; j++)
+    {
+      dp = dotprod(output[i], output[i],  n);
+      for(int q = 0; q<n; q++)
+      {
+        output[i][q] -= dp*output[j][q];
+      }
+    }
+    normpmo = 1.0/norme_euclide(A[i], n);
+    for(int t = 0; t<n; t++)
+    {
+      output[i][t] *= normpmo;
+    }
+  }
+
+}
 
 struct gso cgs(double **A, double *v, int n, int m)
 {
