@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
+struct gso{//gso = gram schmidt output
+  int n, m;
+  double **Vm, **Hm;
+};
+
 double **initmat(int nolines, int nocols);
 double *initvec(int length);
 void freemat(double **mat, int nolines, int nocols);
@@ -9,21 +15,21 @@ void printvec(double *vec, int length);
 double dotprod(double *x, double *y, int length);
 double norme_euclide(double *x, int length);
 double norme_frobenius(double **A, int nolines, int nocols);
+struct gso cgs(double **A, double *v, int n, int m);
 int main (int argc, char **argv)
 {
-  /*
   if (argc != 3)
   {
     printf("wrong number of arguments: ./prog nolines nocols\n");
     exit(1);
   }
-  */
+
   int nolines = atoi(argv[1]), nocols = atoi(argv[2]);
-  printf("%d %d\n", nolines, nocols);
   double **summat = initmat(nolines, nocols);
   double *sumvec = initvec(nocols);
-  printmat(summat, nolines, nocols);
-  printvec(sumvec, nocols);
+  struct gso result = cgs(summat, sumvec, nolines, nocols);
+  printmat(result.Hm, result.n, result.m);
+  printmat(result.Vm, result.n, result.m);
   free(sumvec);
   freemat(summat, nolines, nocols);
   return 0;
@@ -126,4 +132,16 @@ double norme_frobenius(double **A, int nolines, int nocols)
       output+= A[i][j]*A[i][j];
     }
   }
+}
+
+struct gso cgs(double **A, double *v, int n, int m)
+{
+  struct gso output;
+  output.m = m;
+  output.n = n;
+  output.Hm = initmat(n,m);
+  output.Vm = initmat(n,m);
+  output.Hm[0][0] = 3.14159;
+  output.Vm[0][0] = 2.71828;
+  return output;
 }
