@@ -15,6 +15,8 @@ void printvec(double *vec, int length);
 double dotprod(double *x, double *y, int length);
 double norme_euclide(double *x, int length);
 double norme_frobenius(double **A, int nolines, int nocols);
+double **transmat (double **input, int nolines, int nocols);
+double **gs(double **A, int n, int m);
 struct gso cgs(double **A, double *v, int n, int m);
 int main (int argc, char **argv)
 {
@@ -25,13 +27,32 @@ int main (int argc, char **argv)
   }
 
   int nolines = atoi(argv[1]), nocols = atoi(argv[2]);
+
   double **summat = initmat(nolines, nocols);
+  /*
   double *sumvec = initvec(nocols);
   struct gso result = cgs(summat, sumvec, nolines, nocols);
   printmat(result.Hm, result.n, result.m);
   printmat(result.Vm, result.n, result.m);
   free(sumvec);
+  */
+  /*
+  printmat(summat, nolines, nocols);
+  double ** omat = gs(summat, nolines, nocols);
+  printmat(omat, nolines, nocols);
+  freemat(omat, nolines, nocols);
   freemat(summat, nolines, nocols);
+  */
+  double **S = (double **)malloc(2*sizeof(double*));
+  S[0] = (double *)calloc(2, sizeof(double));
+  S[1] = (double *)calloc(2, sizeof(double));
+  S[0][0] = 3.0;
+  S[0][1] = 2.0;
+  S[1][0] = 1.0;
+  S[1][1] = 2.0;
+  //[2][2] = {{3.0,2.0}, {1.0,2.0}};
+  double **GS = gs(S,2,2);
+  printmat(GS,2,2);
   return 0;
 }
 
@@ -134,46 +155,64 @@ double norme_frobenius(double **A, int nolines, int nocols)
   }
 }
 
-double **getQ(double **A, double *v, int n, int m)
+double **transmat (double **input, int nolines, int nocols)
 {
-  double q = initmat(m,n);
+  double **output = initmat(nocols, nolines);
+  for (int lin = 0; lin<nolines; lin++)
+  {
+    for (int cin = 0; cin<nocols; cin++)
+    {
+      output[cin][lin] = input[lin][cin];
+    }
+  }
+}
+
+
+double **getQ(double **A, int n, int m)
+{
+  double **q = initmat(m,n);
   //for(int l = 0; )
 }
 
-double **gs(double **A, double *v, int n, int m)
+double **gs(double **A, int n, int m)
 {
-  double **output = (double**)malloc(n*sizeof(double*));
+  // A in R(n*m) -> output ~ transpos(A) in R(m*n)
+  double **output = (double**)malloc(m*sizeof(double*));
   double dp = 0.0;
-  for(int i = 0; i<n; i++)
+  for(int x = 0; x<m; x++)
   {
-    output[i] = (double*)calloc(m, sizeof(double));
+    output[x] = (double*)calloc(n, sizeof(double));
   }
-  double normpmo = 1.0/norme_euclide(A[0], n);
-  for(int i = 0; i<n; i++)
+  for(int y = 0; y<n; y++)
   {
-    output[0][i] = normpmo * A[0][i];
+    output[0][y] = A[y][0];
+  }
+  double normpmo = 1.0/norme_euclide(output[0], n);
+  for(int y = 0; y<n; y++)
+  {
+    output[0][y] *= normpmo;
   }
   for(int i = 1; i<m; i++)
   {
     for(int p = 0; p<n; p++)
     {
-      output[i][p] = A[i][p];
+      output[i][p] = A[p][i];
     }
-    for(int j = 0; j<j-1; j++)
+    for(int j = 0; j<i-1; j++)
     {
-      dp = dotprod(output[i], output[i],  n);
+      dp = dotprod(output[i], output[j],  n);
       for(int q = 0; q<n; q++)
       {
         output[i][q] -= dp*output[j][q];
       }
     }
-    normpmo = 1.0/norme_euclide(A[i], n);
+    normpmo = 1.0/norme_euclide(output[i], n);
     for(int t = 0; t<n; t++)
     {
       output[i][t] *= normpmo;
     }
   }
-
+  return output;
 }
 
 struct gso cgs(double **A, double *v, int n, int m)
@@ -205,7 +244,7 @@ struct gso cgs(double **A, double *v, int n, int m)
     output.Hm[k][k] = norme_euclide (w, n);
     for(int i = 0; i<n; i++)
     {
-      qj[i] = w[i]/output.hm[k][k];
+      qj[i] = w[i]/output.Hm[k][k];
     }
   }
 
