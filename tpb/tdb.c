@@ -16,6 +16,7 @@ double dotprod(double *x, double *y, int length);
 double norme_euclide(double *x, int length);
 double norme_frobenius(double **A, int nolines, int nocols);
 double **transmat (double **input, int nolines, int nocols);
+double *dpmv (double **A, double *x, int nolines, int nocols);
 double **gs(double **A, int n, int m);
 struct gso cgs(double **A, double *v, int n, int m);
 int main (int argc, char **argv)
@@ -27,8 +28,17 @@ int main (int argc, char **argv)
   }
 
   int nolines = atoi(argv[1]), nocols = atoi(argv[2]);
-
+  /*
   double **summat = initmat(nolines, nocols);
+  printmat(summat, nolines, nocols);
+  printf("\n");
+  double *sumvec = initvec(nocols);
+  printvec(sumvec, nocols);
+  printf("\n");
+  double *davec = dpmv(summat, sumvec, nolines, nocols);
+  printvec(davec, nolines);
+  printf("\n");
+  */
   /*
   double *sumvec = initvec(nocols);
   struct gso result = cgs(summat, sumvec, nolines, nocols);
@@ -50,7 +60,6 @@ int main (int argc, char **argv)
   S[0][1] = 2.0;
   S[1][0] = 1.0;
   S[1][1] = 2.0;
-  //[2][2] = {{3.0,2.0}, {1.0,2.0}};
   double **GS = gs(S,2,2);
   printmat(GS,2,2);
   return 0;
@@ -167,12 +176,19 @@ double **transmat (double **input, int nolines, int nocols)
   }
 }
 
-
-double **getQ(double **A, int n, int m)
+double *dpmv (double **A, double *x, int nolines, int nocols)
 {
-  double **q = initmat(m,n);
-  //for(int l = 0; )
+  double *output = (double*)calloc(nocols, sizeof(double));
+  for(int i = 0; i<nolines; i++)
+  {
+    for(int j = 0; j<nocols; j++)
+    {
+      output[i] += x[j]*A[i][j];
+    }
+  }
+  return output;
 }
+
 
 double **gs(double **A, int n, int m)
 {
@@ -220,33 +236,39 @@ struct gso cgs(double **A, double *v, int n, int m)
   struct gso output;
   output.m = m;
   output.n = n;
-  output.Hm = initmat(n,m);
+  output.Hm = initmat(m,m+1);
   output.Vm = initmat(n,m);
-  double *qj = initvec(n);
-  double * w = initvec(n);
-  for(int k = 0; k<n; k++)
+  double **Q = initmat(m+1,n);
+  double * q = initvec(n);
+  double * w;
+  double b = 0.0, eps = 0.0000001, normpmo = 1/norme_euclide(v, n);
+  for(int x = 0; x<n; x++)
   {
-    for(int i = 0; i<n; i++)
+    v[x] *=normpmo;
+  }
+  for(int k = 1; k<n+1; k++)
+  {
+    w = dpmv(A,Q[k-1],n,n);
+    for(int j = 0; j<k; j++)
     {
-      w[i] = A[i][k];
-    }
-    for(int j = 0; j<k; k++)
-    {
-      output.Hm[j][k] = dotprod (w,qj,n);
-    }
-    for(int i = 0; i<n; i++)
-    {
-      for(int j = 0; j<k; k++)
+      h[j][k-1] = dotprod(Q[j], w, n);
+      for(int y = 0; y<n; y++)
       {
-        w[i]-= output.Hm[j][k]*qj[i];
+        v[y] -= output.Hm[j][k-1] *Q[j][y];
       }
     }
-    output.Hm[k][k] = norme_euclide (w, n);
-    for(int i = 0; i<n; i++)
+    output.Hm[k][k-1] = norme_euclide(v,n);
+    if(output.Hm[k][k-1]>eps)
     {
-      qj[i] = w[i]/output.Hm[k][k];
+      for(int z = 0; z<n; z++)
+      {
+        Q[k][z] = v[z]/output.Hm[k][k-1];
+      }
+    }
+    else
+    {
+      return output;
     }
   }
 
-  return output;
 }
