@@ -178,7 +178,7 @@ double **gs(double **A, int n, int m)
 {
   // A in R(n*m) -> output ~ transpos(A) in R(m*n)
   double **output = (double**)malloc(m*sizeof(double*));
-  double dp = 0.0;
+  double dp = 0.0, normpmo = 0.0;
   for(int x = 0; x<m; x++)
   {
     output[x] = (double*)calloc(n, sizeof(double));
@@ -187,7 +187,7 @@ double **gs(double **A, int n, int m)
   {
     output[0][y] = A[y][0];
   }
-  double normpmo = 1.0/norme_euclide(output[0], n);
+  normpmo = 1.0/norme_euclide(output[0], n);
   for(int y = 0; y<n; y++)
   {
     output[0][y] *= normpmo;
@@ -198,7 +198,7 @@ double **gs(double **A, int n, int m)
     {
       output[i][p] = A[p][i];
     }
-    for(int j = 0; j<i-1; j++)
+    for(int j = 0; j<i; j++)
     {
       dp = dotprod(output[i], output[j],  n);
       for(int q = 0; q<n; q++)
