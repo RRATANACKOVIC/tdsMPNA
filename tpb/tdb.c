@@ -23,11 +23,23 @@ int main (int argc, char **argv)
 {
   if (argc != 3)
   {
-    printf("wrong number of arguments: ./prog nolines nocols\n");
+    printf("wrong number of arguments: ./prog n m nomes func\n");
     exit(1);
   }
 
   int nolines = atoi(argv[1]), nocols = atoi(argv[2]);
+  unsigned long long start = 0, end = 0, nocycles = 0;
+  struct timespec tstart={0,0}, tend={0,0};
+
+  int nrep = 10, nfunc = 1;
+  double meanvals, stdvals, nflop, memory;
+  double ticks[nrep];
+
+  FILE *fp;
+  fp = fopen(filename, "w+");
+  fprintf(fp,"\n");
+  //fprintf(fp,"%s; ; ; ; ;\n", fnames[i]);
+  fprintf(fp,"no.elts;M.RT(ns);RT.std (ns); nflop;size(kB);");
   /*
   double **summat = initmat(nolines, nocols);
   printmat(summat, nolines, nocols);
