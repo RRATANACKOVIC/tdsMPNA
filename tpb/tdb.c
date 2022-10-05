@@ -1,12 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
 struct gso{//gso = gram schmidt output
   int n, m;
   double **Vm, **Hm;
 };
 
+unsigned long long rdtsc(void);
+unsigned long long mean(unsigned long long *a, int size);
+double std(unsigned long long *a, unsigned long long meanval, int size);
 double **initmat(int nolines, int nocols);
 double *initvec(int length);
 void freemat(double **mat, int nolines, int nocols);
@@ -21,25 +25,42 @@ double **gs(double **A, int n, int m);
 struct gso cgs(double **A, double *v, int n, int m);
 int main (int argc, char **argv)
 {
-  if (argc != 3)
+  if (argc != 6)
   {
-    printf("wrong number of arguments: ./prog n m nomes func\n");
+    printf("wrong number of arguments: ./prog n m nomes funcname filename\n");
     exit(1);
   }
 
-  int nolines = atoi(argv[1]), nocols = atoi(argv[2]);
+  int nrep = 10;
+  int n = atoi(argv[1]), m = atoi(argv[2]), nomes = atoi(argv[3]), step = n/nomes;
+  char *funcname = argv[4];
   unsigned long long start = 0, end = 0, nocycles = 0;
   struct timespec tstart={0,0}, tend={0,0};
 
-  int nrep = 10, nfunc = 1;
-  double meanvals, stdvals, nflop, memory;
-  double ticks[nrep];
+  unsigned long long meanval, stdval, nflop, memory;
+  unsigned long long ticks[nrep];
 
   FILE *fp;
   fp = fopen(filename, "w+");
   fprintf(fp,"\n");
-  //fprintf(fp,"%s; ; ; ; ;\n", fnames[i]);
-  fprintf(fp,"no.elts;M.RT(ns);RT.std (ns); nflop;size(kB);");
+  fprintf(fp,"%s; ; ; ; ;\n", funcname);
+  fprintf(fp,"no.elts;M.N.O.T;T.std ; nflop;size(kB);\n");
+  for(int i = 0; i<n; i+=step)
+  {
+    for(int j = 0; j<nrep; j++)
+    {
+      start = rdtsc();
+      //runfunc
+      end = rdtsc();
+      ticks[i] = end - start;
+    }
+    meanval = mean(ticks, nrep);
+    stdval = std(ticks, meanval, nrep);
+    memory = 2*i*(i+1) + 2;
+    nflop = i*(i+1)*(4*i+1)/2 + i*i + 2*i + 1;
+    fprintf(fp,"%d;%lld;%lf;%lld;%lld;\n", i, meanvals, stdvals, nflop, memory);
+  }
+  fclose(fp);
   /*
   double **summat = initmat(nolines, nocols);
   printmat(summat, nolines, nocols);
@@ -65,6 +86,7 @@ int main (int argc, char **argv)
   freemat(omat, nolines, nocols);
   freemat(summat, nolines, nocols);
   */
+  /*
   double **S = (double **)malloc(2*sizeof(double*));
   S[0] = (double *)calloc(2, sizeof(double));
   S[1] = (double *)calloc(2, sizeof(double));
@@ -74,8 +96,41 @@ int main (int argc, char **argv)
   S[1][1] = 2.0;
   double **GS = gs(S,2,2);
   printmat(GS,2,2);
+  */
   return 0;
 }
+
+unsigned long long rdtsc(void)
+{
+  unsigned long long a, d;
+
+  __asm__ volatile ("rdtsc" : "=a" (a), "=d" (d));
+
+  return (d << 32) | a;
+}
+
+unsigned long long mean(unsigned long long *a, int size)
+{
+	unsigned long long r = 0;
+	for(int i = 0; i < size; i++)
+  {
+    r += a[i];
+  }
+	return r / (unsigned long long) size;
+}
+
+unsigned long long std(unsigned long long *a, unsigned long long meanval, int size)
+{
+	unsigned long long r = 0;
+	for(int i = 0; i < size; i++)
+  {
+    r += a[i] * a[i];
+  }
+	r /= (unsigned long long) size;
+	r -= meanval*meanval;
+	return sqrt(r);
+}
+
 
 int randxy(int x, int y)
 {
@@ -215,10 +270,10 @@ double **gs(double **A, int n, int m)
   {
     output[0][y] = A[y][0];
   }
-  normpmo = 1.0/norme_euclide(output[0], n);
+  normpmo = 1.0/norme_euclide(output[0], n);//1
   for(int y = 0; y<n; y++)
   {
-    output[0][y] *= normpmo;
+    output[0][y] *= normpmo;//n ->n+1
   }
   for(int i = 1; i<m; i++)
   {
@@ -228,16 +283,16 @@ double **gs(double **A, int n, int m)
     }
     for(int j = 0; j<i; j++)
     {
-      dp = dotprod(output[i], output[j],  n);
+      dp = dotprod(output[i], output[j],  n); //m(m+1)/2 *(2n-1) -> m(m+1)(2n+1)/2 + n + 1
       for(int q = 0; q<n; q++)
       {
-        output[i][q] -= dp*output[j][q];
+        output[i][q] -= dp*output[j][q]; // m(m+1)/2 *2n -> m(m+1)(4n+1)/2 + n + 1
       }
     }
-    normpmo = 1.0/norme_euclide(output[i], n);
+    normpmo = 1.0/norme_euclide(output[i], n);//m -> m(m+1)(4n+1)/2 + m + n + 1
     for(int t = 0; t<n; t++)
     {
-      output[i][t] *= normpmo;
+      output[i][t] *= normpmo;// mn -> m(m+1)(4n+1)/2 + mn + m + n + 1
     }
   }
   return output;
