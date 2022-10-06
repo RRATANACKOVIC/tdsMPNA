@@ -22,6 +22,7 @@ double norme_frobenius(double **A, int nolines, int nocols);
 double **transmat (double **input, int nolines, int nocols);
 double *dpmv (double **A, double *x, int nolines, int nocols);
 double **gs(double **A, int n, int m);
+struct gso mgs(double **A, double *v, int n, int m);
 struct gso cgs(double **A, double *v, int n, int m);
 int main (int argc, char **argv)
 {
@@ -61,6 +62,18 @@ int main (int argc, char **argv)
         end = rdtsc();
         printf("norme_frobenius = %lf\n", norme_frobenius(outputgs, i, i));
       }
+      /*
+      else if(strcmp(funcname,"mgs") == 0)
+      {
+        input = initmat(i,i);
+        inputvec = initvec(i);
+        start = rdtsc();
+        outputcgs = mgs(input, inputvec, i, i);
+        end = rdtsc();
+        printf("||Hm|| = %lf\n", norme_frobenius(outputcgs.Hm,i,i+1));
+        printf("||Vm|| = %lf\n", norme_frobenius(outputcgs.Vm,i+1,i));
+      }
+      */
       else if(strcmp(funcname,"cgs") == 0)
       {
         input = initmat(i,i);
@@ -68,6 +81,8 @@ int main (int argc, char **argv)
         start = rdtsc();
         outputcgs = cgs(input, inputvec, i, i);
         end = rdtsc();
+        printf("||Hm|| = %lf\n", norme_frobenius(outputcgs.Hm,i,i+1));
+        printf("||Vm|| = %lf\n", norme_frobenius(outputcgs.Vm,i+1,i));
       }
       ticks[j] = end - start;
     }
@@ -75,12 +90,22 @@ int main (int argc, char **argv)
     stdval = std(ticks, meanval, nrep);
     if(strcmp(funcname,"gs") == 0)
     {
-      memory = 2*i*(i+1) + 2;
+      memory = 64*2*i*(i+1) + 2;
       nflop = i*(i+1)*(4*i+1)/2 + i*i + 2*i + 1;
     }
+    /*
+    else if(strcmp(funcname,"mgs") == 0)
+    {
+      //printmat(outputcgs.Hm, i, i+1);
+      nflop = 2*(i*(i*i+1)+i*i*(i+1)+i*i);
+      memory = 64*3*i*i+2*i;
+    }
+    */
     else if(strcmp(funcname,"cgs") == 0)
     {
-      printmat(outputcgs.Hm, i, i+1);
+      //printmat(outputcgs.Hm, i, i+1);
+      nflop = 2*(i*(i*i+1)+i*i*(i+1)+i*i);
+      memory = 64*3*i*i+2*i;
     }
     fprintf(fp,"%d;%lld;%lld;%lld;%lld;\n", i, meanval, stdval, nflop, memory);
   }
@@ -323,6 +348,50 @@ double **gs(double **A, int n, int m)
   return output;
 }
 
+struct gso mgs(double **A, double *v, int n, int m)
+{
+  struct gso output;
+  output.m = m;
+  output.n = n;
+  output.Hm = initmat(m,m+1);
+  output.Vm = initmat(m+1,n);
+  //double **Q = initmat(m+1,n);
+  double * w;
+  double b = 0.0, eps = 0.0000001, normpmo = 1/norme_euclide(v, n);//n
+  for(int x = 0; x<n; x++)
+  {
+    output.Vm[0][x] = v[x]*normpmo;//n ->2n
+  }
+  for(int k = 1; k<m+1; k++)
+  {
+    w = dpmv(A,output.Vm[k-1],n,n);//2mn² -> 2n(mn+1)
+    //printf("1\n");
+    for(int j = 0; j<k; j++)
+    {
+      output.Hm[k-1][j] = dotprod(output.Vm[j], w, n);// 2n*m(m+1)/2 -> 2n(mn+1) +nm(m+1)
+      for(int y = 0; y<n; y++)
+      {
+        w[y] -= output.Hm[k-1][j] *output.Vm[j][y];// 2n*m(m+1)/2 -> 2(n(mn+1)+nm(m+1))
+      }
+    }
+    output.Hm[k-1][k] = norme_euclide(w,n);//2nm -> 2(n(mn+1)+nm(m+1)+mn)
+    //printf("2\n");
+    if(output.Hm[k-1][k]>eps)
+    {
+      for(int z = 0; z<n; z++)
+      {
+        output.Vm[k][z] = w[z]/output.Hm[k-1][k];
+      }
+    }
+    else
+    {
+      return output;
+    }
+  }
+  return output;
+}
+
+
 struct gso cgs(double **A, double *v, int n, int m)
 {
   struct gso output;
@@ -343,13 +412,17 @@ struct gso cgs(double **A, double *v, int n, int m)
     //printf("1\n");
     for(int j = 0; j<k; j++)
     {
-      output.Hm[k-1][j] = dotprod(output.Vm[j], w, n);
+      output.Hm[k-1][j] = dotprod(output.Vm[j], w, n);// 2n*m(m+1)/2 -> 2n(mn+1) +nm(m+1)
+
+    }
+    for(int h = 0; h<k; h++)
+    {
       for(int y = 0; y<n; y++)
       {
-        w[y] -= output.Hm[k-1][j] *output.Vm[j][y];
+        w[y] -= output.Hm[k-1][h] *output.Vm[h][y];// 2n*m(m+1)/2 -> 2(n(mn+1)+nm(m+1))
       }
     }
-    output.Hm[k-1][k] = norme_euclide(w,n);
+    output.Hm[k-1][k] = norme_euclide(w,n);//2nm -> 2(n(mn+1)+nm(m+1)+mn)
     //printf("2\n");
     if(output.Hm[k-1][k]>eps)
     {
