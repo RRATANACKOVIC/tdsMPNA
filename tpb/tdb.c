@@ -73,8 +73,15 @@ int main (int argc, char **argv)
     }
     meanval = mean(ticks, nrep);
     stdval = std(ticks, meanval, nrep);
-    memory = 2*i*(i+1) + 2;
-    nflop = i*(i+1)*(4*i+1)/2 + i*i + 2*i + 1;
+    if(strcmp(funcname,"gs") == 0)
+    {
+      memory = 2*i*(i+1) + 2;
+      nflop = i*(i+1)*(4*i+1)/2 + i*i + 2*i + 1;
+    }
+    else if(strcmp(funcname,"cgs") == 0)
+    {
+      printmat(outputcgs.Hm, i, i+1);
+    }
     fprintf(fp,"%d;%lld;%lld;%lld;%lld;\n", i, meanval, stdval, nflop, memory);
   }
   fclose(fp);
@@ -322,34 +329,33 @@ struct gso cgs(double **A, double *v, int n, int m)
   output.m = m;
   output.n = n;
   output.Hm = initmat(m,m+1);
-  output.Vm = initmat(n,m);
-  double **Q = initmat(m+1,n);
-  double * q = initvec(n);
+  output.Vm = initmat(m+1,n);
+  //double **Q = initmat(m+1,n);
   double * w;
-  double b = 0.0, eps = 0.0000001, normpmo = 1/norme_euclide(v, n);
+  double b = 0.0, eps = 0.0000001, normpmo = 1/norme_euclide(v, n);//n
   for(int x = 0; x<n; x++)
   {
-    v[x] *=normpmo;
+    output.Vm[0][x] = v[x]*normpmo;//n ->2n
   }
-  for(int k = 1; k<m; k++)
+  for(int k = 1; k<m+1; k++)
   {
-    w = dpmv(A,Q[k-1],n,n);
-    printf("1\n");
+    w = dpmv(A,output.Vm[k-1],n,n);//2mn² -> 2n(mn+1)
+    //printf("1\n");
     for(int j = 0; j<k; j++)
     {
-      output.Hm[j][k-1] = dotprod(Q[j], w, n);
+      output.Hm[k-1][j] = dotprod(output.Vm[j], w, n);
       for(int y = 0; y<n; y++)
       {
-        v[y] -= output.Hm[j][k-1] *Q[j][y];
+        w[y] -= output.Hm[k-1][j] *output.Vm[j][y];
       }
     }
-    output.Hm[k][k-1] = norme_euclide(v,n);
-    printf("2\n");
-    if(output.Hm[k][k-1]>eps)
+    output.Hm[k-1][k] = norme_euclide(w,n);
+    //printf("2\n");
+    if(output.Hm[k-1][k]>eps)
     {
       for(int z = 0; z<n; z++)
       {
-        Q[k][z] = v[z]/output.Hm[k][k-1];
+        output.Vm[k][z] = w[z]/output.Hm[k-1][k];
       }
     }
     else
