@@ -10,7 +10,7 @@ struct gso{//gso = gram schmidt output
 
 unsigned long long rdtsc(void);
 unsigned long long mean(unsigned long long *a, int size);
-double std(unsigned long long *a, unsigned long long meanval, int size);
+unsigned long long std(unsigned long long *a, unsigned long long meanval, int size);
 double **initmat(int nolines, int nocols);
 double *initvec(int length);
 void freemat(double **mat, int nolines, int nocols);
@@ -33,32 +33,36 @@ int main (int argc, char **argv)
 
   int nrep = 10;
   int n = atoi(argv[1]), m = atoi(argv[2]), nomes = atoi(argv[3]), step = n/nomes;
-  char *funcname = argv[4];
+  char *funcname = argv[4], *filename = argv[5];
   unsigned long long start = 0, end = 0, nocycles = 0;
   struct timespec tstart={0,0}, tend={0,0};
 
   unsigned long long meanval, stdval, nflop, memory;
   unsigned long long ticks[nrep];
 
+  double **input, **output;
+
   FILE *fp;
   fp = fopen(filename, "w+");
   fprintf(fp,"\n");
   fprintf(fp,"%s; ; ; ; ;\n", funcname);
   fprintf(fp,"no.elts;M.N.O.T;T.std ; nflop;size(kB);\n");
-  for(int i = 0; i<n; i+=step)
+  for(int i = step; i<=n; i+=step)
   {
     for(int j = 0; j<nrep; j++)
     {
+      input = initmat(i,i);
       start = rdtsc();
-      //runfunc
+      output = gs(input, i, i);
       end = rdtsc();
+      printf("norme_frobenius = %lf\n", norme_frobenius(output, i, i));
       ticks[i] = end - start;
     }
     meanval = mean(ticks, nrep);
     stdval = std(ticks, meanval, nrep);
     memory = 2*i*(i+1) + 2;
     nflop = i*(i+1)*(4*i+1)/2 + i*i + 2*i + 1;
-    fprintf(fp,"%d;%lld;%lf;%lld;%lld;\n", i, meanvals, stdvals, nflop, memory);
+    fprintf(fp,"%d;%lld;%lld;%lld;%lld;\n", i, meanval, stdval, nflop, memory);
   }
   fclose(fp);
   /*
@@ -116,7 +120,8 @@ unsigned long long mean(unsigned long long *a, int size)
   {
     r += a[i];
   }
-	return r / (unsigned long long) size;
+  r/=size;
+	return r;
 }
 
 unsigned long long std(unsigned long long *a, unsigned long long meanval, int size)
@@ -318,7 +323,7 @@ struct gso cgs(double **A, double *v, int n, int m)
     w = dpmv(A,Q[k-1],n,n);
     for(int j = 0; j<k; j++)
     {
-      h[j][k-1] = dotprod(Q[j], w, n);
+      output.Hm[j][k-1] = dotprod(Q[j], w, n);
       for(int y = 0; y<n; y++)
       {
         v[y] -= output.Hm[j][k-1] *Q[j][y];
