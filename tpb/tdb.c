@@ -40,7 +40,9 @@ int main (int argc, char **argv)
   unsigned long long meanval, stdval, nflop, memory;
   unsigned long long ticks[nrep];
 
-  double **input, **output;
+  double **input, **outputgs;
+  double *inputvec;
+  struct gso outputcgs;
 
   FILE *fp;
   fp = fopen(filename, "w+");
@@ -51,12 +53,23 @@ int main (int argc, char **argv)
   {
     for(int j = 0; j<nrep; j++)
     {
-      input = initmat(i,i);
-      start = rdtsc();
-      output = gs(input, i, i);
-      end = rdtsc();
-      printf("norme_frobenius = %lf\n", norme_frobenius(output, i, i));
-      ticks[i] = end - start;
+      if(strcmp(funcname,"gs") == 0)
+      {
+        input = initmat(i,i);
+        start = rdtsc();
+        outputgs = gs(input, i, i);
+        end = rdtsc();
+        printf("norme_frobenius = %lf\n", norme_frobenius(outputgs, i, i));
+      }
+      else if(strcmp(funcname,"cgs") == 0)
+      {
+        input = initmat(i,i);
+        inputvec = initvec(i);
+        start = rdtsc();
+        outputcgs = cgs(input, inputvec, i, i);
+        end = rdtsc();
+      }
+      ticks[j] = end - start;
     }
     meanval = mean(ticks, nrep);
     stdval = std(ticks, meanval, nrep);
@@ -318,9 +331,10 @@ struct gso cgs(double **A, double *v, int n, int m)
   {
     v[x] *=normpmo;
   }
-  for(int k = 1; k<n+1; k++)
+  for(int k = 1; k<m; k++)
   {
     w = dpmv(A,Q[k-1],n,n);
+    printf("1\n");
     for(int j = 0; j<k; j++)
     {
       output.Hm[j][k-1] = dotprod(Q[j], w, n);
@@ -330,6 +344,7 @@ struct gso cgs(double **A, double *v, int n, int m)
       }
     }
     output.Hm[k][k-1] = norme_euclide(v,n);
+    printf("2\n");
     if(output.Hm[k][k-1]>eps)
     {
       for(int z = 0; z<n; z++)
@@ -342,5 +357,5 @@ struct gso cgs(double **A, double *v, int n, int m)
       return output;
     }
   }
-
+  return output;
 }
