@@ -26,17 +26,24 @@ double *mattovec(int major, double ** input, int nolines, int nocols);
 
 int main (int argc, char **argv)
 {
-
-  double **damat = initmat(3, 3);
-  printmat(damat,3, 3);
-  printf("\n");
-  double *darmvec = mattovec(0, damat, 3, 3);
-  printvec(darmvec, 3*3);
-  printf("\n");
-  double *dacmvec = mattovec(1, damat, 3, 3);
-  printvec(dacmvec, 3*3);
-  printf("\n");
-
+  int n = 5, lda = 5, ldvl = 5, ldvr = 5, info;
+  double wr[n], wi[n], vl[ldvl*n], vr[ldvr*n];
+  double **a = initmat(5,5);
+  a[0][0] = -1.01;
+  a[0][1] = 0.86;
+  a[0][2] = -4.60;
+  a[0][3] = 3.31;
+  a[0][4] = -4.81;
+  /*
+  double a[lda][n] = { {-1.01,  0.86, -4.60,  3.31, -4.81},
+            {3.98,  0.53, -7.04,  5.29,  3.55},
+            {3.30,  8.26, -3.89,  8.20, -1.51},
+            {4.43,  4.96, -7.66, -7.33,  6.18},
+            {7.31, -6.43, -6.16,  2.47,  5.58} };
+            */
+  double b[2][2] = { {1.11, 2.22},
+                    {3.33,4.44}};
+  //info = LAPACKE_dgeev( LAPACK_ROW_MAJOR, 'V', 'V', n, a, lda, wr, wi, vl, ldvl, vr, ldvr );
   return 0;
 }
 
