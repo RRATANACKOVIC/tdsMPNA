@@ -21,9 +21,12 @@ double norme_euclide(double *x, int length);
 double norme_frobenius(double **A, int nolines, int nocols);
 double **transmat (double **input, int nolines, int nocols);
 double *dpmv (double **A, double *x, int nolines, int nocols);
-double **gs(double **A, int n, int m);
+double **arnoldi(double **A, int n, int m);
 struct gso mgs(double **A, double *v, int n, int m);
 struct gso cgs(double **A, double *v, int n, int m);
+double test_gs(double **Q, int nolines, int nocols);
+double **LUPDecompose(double **A, int N, double Tol, int *P);
+double LUPDeterminant(double **A, int *P, int N);
 int main (int argc, char **argv)
 {
   if (argc != 6)
@@ -58,11 +61,11 @@ int main (int argc, char **argv)
       {
         input = initmat(i,i);
         start = rdtsc();
-        outputgs = gs(input, i, i);
+        outputgs = arnoldi(input, i, i);
         end = rdtsc();
-        printf("norme_frobenius = %lf\n", norme_frobenius(outputgs, i, i));
+        printf("sum(qi.qj) = %lf\n", test_gs(outputgs,i,i));
       }
-      /*
+
       else if(strcmp(funcname,"mgs") == 0)
       {
         input = initmat(i,i);
@@ -70,10 +73,8 @@ int main (int argc, char **argv)
         start = rdtsc();
         outputcgs = mgs(input, inputvec, i, i);
         end = rdtsc();
-        printf("||Hm|| = %lf\n", norme_frobenius(outputcgs.Hm,i,i+1));
-        printf("||Vm|| = %lf\n", norme_frobenius(outputcgs.Vm,i+1,i));
+        printf("sum(qi.qj) = %lf\n", test_gs(outputcgs.Vm,i+1,i));
       }
-      */
       else if(strcmp(funcname,"cgs") == 0)
       {
         input = initmat(i,i);
@@ -81,8 +82,7 @@ int main (int argc, char **argv)
         start = rdtsc();
         outputcgs = cgs(input, inputvec, i, i);
         end = rdtsc();
-        printf("||Hm|| = %lf\n", norme_frobenius(outputcgs.Hm,i,i+1));
-        printf("||Vm|| = %lf\n", norme_frobenius(outputcgs.Vm,i+1,i));
+        printf("size, %d, sum(qi.qj) = %lf\n",i, test_gs(outputcgs.Vm,i+1,i));
       }
       ticks[j] = end - start;
     }
@@ -93,14 +93,14 @@ int main (int argc, char **argv)
       memory = 64*2*i*(i+1) + 2;
       nflop = i*(i+1)*(4*i+1)/2 + i*i + 2*i + 1;
     }
-    /*
+
     else if(strcmp(funcname,"mgs") == 0)
     {
       //printmat(outputcgs.Hm, i, i+1);
       nflop = 2*(i*(i*i+1)+i*i*(i+1)+i*i);
       memory = 64*3*i*i+2*i;
     }
-    */
+
     else if(strcmp(funcname,"cgs") == 0)
     {
       //printmat(outputcgs.Hm, i, i+1);
@@ -110,42 +110,6 @@ int main (int argc, char **argv)
     fprintf(fp,"%d;%lld;%lld;%lld;%lld;\n", i, meanval, stdval, nflop, memory);
   }
   fclose(fp);
-  /*
-  double **summat = initmat(nolines, nocols);
-  printmat(summat, nolines, nocols);
-  printf("\n");
-  double *sumvec = initvec(nocols);
-  printvec(sumvec, nocols);
-  printf("\n");
-  double *davec = dpmv(summat, sumvec, nolines, nocols);
-  printvec(davec, nolines);
-  printf("\n");
-  */
-  /*
-  double *sumvec = initvec(nocols);
-  struct gso result = cgs(summat, sumvec, nolines, nocols);
-  printmat(result.Hm, result.n, result.m);
-  printmat(result.Vm, result.n, result.m);
-  free(sumvec);
-  */
-  /*
-  printmat(summat, nolines, nocols);
-  double ** omat = gs(summat, nolines, nocols);
-  printmat(omat, nolines, nocols);
-  freemat(omat, nolines, nocols);
-  freemat(summat, nolines, nocols);
-  */
-  /*
-  double **S = (double **)malloc(2*sizeof(double*));
-  S[0] = (double *)calloc(2, sizeof(double));
-  S[1] = (double *)calloc(2, sizeof(double));
-  S[0][0] = 3.0;
-  S[0][1] = 2.0;
-  S[1][0] = 1.0;
-  S[1][1] = 2.0;
-  double **GS = gs(S,2,2);
-  printmat(GS,2,2);
-  */
   return 0;
 }
 
@@ -307,7 +271,7 @@ double *dpmv (double **A, double *x, int nolines, int nocols)
 }
 
 
-double **gs(double **A, int n, int m)
+double **arnoldi(double **A, int n, int m)
 {
   // A in R(n*m) -> output ~ transpos(A) in R(m*n)
   double **output = (double**)malloc(m*sizeof(double*));
@@ -437,4 +401,76 @@ struct gso cgs(double **A, double *v, int n, int m)
     }
   }
   return output;
+}
+
+double test_gs(double **Q, int nolines, int nocols)
+{
+  double output = 0.0;
+  for(int i = 0; i<nolines; i++)
+  {
+    for(int j = i+1; j<nolines; j++)
+    {
+      output += dotprod(Q[i], Q[j], nocols);
+    }
+  }
+  return output;
+}
+
+double **LUPDecompose(double **A, int N, double Tol, int *P)
+{
+    double **output;
+    int i, j, k, imax;
+    double maxA, *ptr, absA;
+
+    for (i = 0; i <= N; i++)
+        P[i] = i; //Unit permutation matrix, P[N] initialized with N
+
+    for (i = 0; i < N; i++) {
+        maxA = 0.0;
+        imax = i;
+
+        for (k = i; k < N; k++)
+            if ((absA = fabs(A[k][i])) > maxA) {
+                maxA = absA;
+                imax = k;
+            }
+
+        if (maxA < Tol) return 0; //failure, matrix is degenerate
+
+        if (imax != i)
+        {
+            //pivoting P
+            j = P[i];
+            P[i] = P[imax];
+            P[imax] = j;
+
+            //pivoting rows of A
+            ptr = A[i];
+            A[i] = A[imax];
+            A[imax] = ptr;
+
+            //counting pivots starting from N (for determinant)
+            P[N]++;
+        }
+
+        for (j = i + 1; j < N; j++) {
+            A[j][i] /= A[i][i];
+
+            for (k = i + 1; k < N; k++)
+                A[j][k] -= A[j][i] * A[i][k];
+        }
+    }
+
+    return output;  //decomposition done
+}
+
+double LUPDeterminant(double **A, int *P, int N)
+{
+
+    double det = A[0][0];
+
+    for (int i = 1; i < N; i++)
+        det *= A[i][i];
+
+    return (P[N] - N) % 2 == 0 ? det : -det;
 }
