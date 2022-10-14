@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include <cblas.h>
+#include <lapacke.h>
 
 struct gso{//gso = gram schmidt output
   int n, m;
@@ -19,51 +21,21 @@ void printvec(double *vec, int length);
 double dotprod(double *x, double *y, int length);
 double norme_euclide(double *x, int length);
 struct gso mgs(double **A, double *v, int n, int m);
+double *mattovec(int major, double ** input, int nolines, int nocols);
+
 
 int main (int argc, char **argv)
 {
-  if (argc != 6)
-  {
-    printf("wrong number of arguments: ./prog n m nomes funcname filename\n");
-    exit(1);
-  }
 
-  int nrep = 10;
-  int n = atoi(argv[1]), m = atoi(argv[2]), nomes = atoi(argv[3]), step = n/nomes;
-  char *funcname = argv[4], *filename = argv[5];
-  unsigned long long start = 0, end = 0, nocycles = 0;
-  struct timespec tstart={0,0}, tend={0,0};
-
-  unsigned long long meanval, stdval, nflop, memory;
-  unsigned long long ticks[nrep];
-
-  double **input, **outputgs;
-  double *inputvec;
-  struct gso outputcgs;
-
-  FILE *fp;
-  fp = fopen(filename, "w+");
-  fprintf(fp,"\n");
-  fprintf(fp,"%s; ; ; ; ;\n", funcname);
-  fprintf(fp,"no.elts;M.N.O.T;T.std ; nflop;size(kB);\n");
-  for(int i = step; i<=n; i+=step)
-  {
-    for(int j = 0; j<nrep; j++)
-    {
-      input = initmat(i,i);
-      inputvec = initvec(i);
-      start = rdtsc();
-      outputcgs = mgs(input, inputvec, i, i);
-      end = rdtsc();
-    }
-
-      //printmat(outputcgs.Hm, i, i+1);
-      nflop = 2*(i*(i*i+1)+i*i*(i+1)+i*i);
-      memory = 64*3*i*i+2*i;
-    }
-    fprintf(fp,"%d;%lld;%lld;%lld;%lld;\n", i, meanval, stdval, nflop, memory);
-  }
-  fclose(fp);
+  double **damat = initmat(3, 3);
+  printmat(damat,3, 3);
+  printf("\n");
+  double *darmvec = mattovec(0, damat, 3, 3);
+  printvec(darmvec, 3*3);
+  printf("\n");
+  double *dacmvec = mattovec(1, damat, 3, 3);
+  printvec(dacmvec, 3*3);
+  printf("\n");
 
   return 0;
 }
@@ -100,13 +72,11 @@ unsigned long long std(unsigned long long *a, unsigned long long meanval, int si
 	return sqrt(r);
 }
 
-
 int randxy(int x, int y)
 {
   return (rand() % (y - x + 1)) + x;
 }
 
-//
 double randreal()
 {
   int s = (randxy(0, 1)) ? 1 : -1;
@@ -114,7 +84,6 @@ double randreal()
 
   return s * ((double)a / (double)b);
 }
-
 
 double **initmat(int nolines, int nocols)
 {
@@ -188,7 +157,6 @@ double norme_euclide(double *x, int length)
   return sqrt(dotprod(x,x,length));
 }
 
-
 double *dpmv (double **A, double *x, int nolines, int nocols)
 {
   double *output = (double*)calloc(nocols, sizeof(double));
@@ -201,7 +169,6 @@ double *dpmv (double **A, double *x, int nolines, int nocols)
   }
   return output;
 }
-
 
 struct gso mgs(double **A, double *v, int n, int m)
 {
@@ -242,6 +209,36 @@ struct gso mgs(double **A, double *v, int n, int m)
     {
       return output;
     }
+  }
+  return output;
+}
+
+double *mattovec(int major, double ** input, int nolines, int nocols)
+{
+  double *output = (double*)calloc(nolines*nocols,sizeof(double));
+  if (major == 0)//rowmajor
+  {
+    for(int l = 0; l<nolines; l++)
+    {
+      for(int c = 0; c<nocols; c++)
+      {
+        output[c +l*nocols] = input[l][c];
+      }
+    }
+  }
+  else if (major == 1)//colmajor
+  {
+    for(int l = 0; l<nolines; l++)
+    {
+      for(int c = 0; c<nocols; c++)
+      {
+        output[c*nolines +l] = input[l][c];
+      }
+    }
+  }
+  else
+  {
+    printf(" major = 0 => rowmajor, major = 1 => colmajor, if else your output vect is full of zeros.\n");
   }
   return output;
 }
